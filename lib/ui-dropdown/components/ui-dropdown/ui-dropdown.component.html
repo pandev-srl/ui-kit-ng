@@ -1,0 +1,9 @@
+<div
+  uiClickOutside
+  (clickOutside)="onClickOutside()"
+>
+  <ng-content select="[uiDropdownToggle]"></ng-content>
+  <ng-container *ngIf="opened">
+    <ng-content select="ui-dropdown-menu"></ng-content>
+  </ng-container>
+</div>

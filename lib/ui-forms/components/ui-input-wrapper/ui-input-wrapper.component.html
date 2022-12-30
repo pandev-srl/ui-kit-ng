@@ -1,0 +1,37 @@
+<ui-control-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+>
+  <div class="input-wrapper">
+    <div class="input-item">
+      <ng-content></ng-content>
+    </div>
+    <div
+      *ngIf="isDirtyOrTouched"
+      class="validation-item"
+    >
+      <i
+        [uiIcon]="defaultErrorIcon"
+        *ngIf="hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultSuccessIcon"
+        *ngIf="!hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultPendingIcon"
+        class="fa-spin"
+        *ngIf="isPending && !disableValidationColors"
+      ></i>
+    </div>
+  </div>
+</ui-control-wrapper>

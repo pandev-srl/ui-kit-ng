@@ -1,0 +1,17 @@
+ui-dropdown {
+  @apply inline-block;
+  @apply relative;
+
+  ui-dropdown-menu {
+    @apply block;
+    @apply absolute;
+
+    &.placement-left {
+      @apply left-0;
+    }
+
+    &.placement-right {
+      @apply right-0;
+    }
+  }
+}

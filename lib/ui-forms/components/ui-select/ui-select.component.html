@@ -1,0 +1,88 @@
+<ui-control-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+  uiClickOutside
+  (clickOutside)="onClickOutside()"
+>
+  <div
+    class="select-wrapper"
+    tabindex="0"
+  >
+    <div
+      class="handler"
+      (click)="onToggle()"
+      (blur)="onBlur()"
+    >
+      <span>{{ selectedOption?.label || prompt }}</span>
+    </div>
+
+    <div class="caret-wrapper">
+      <i
+        *ngIf="opened"
+        (click)="onToggle()"
+        uiIcon="{{ defaultCaretOpenIcon }} fa-lg"
+      ></i>
+      <i
+        *ngIf="!opened"
+        (click)="onToggle()"
+        uiIcon="{{ defaultCaretCloseIcon }} fa-lg"
+      ></i>
+    </div>
+
+    <div
+      *ngIf="clearable && selectedOption !== null"
+      class="clear-button-wrapper"
+    >
+      <i
+        (click)="onClear()"
+        [uiIcon]="defaultClearIcon"
+      ></i>
+    </div>
+
+    <div
+      *ngIf="isDirtyOrTouched"
+      class="validation-item"
+    >
+      <i
+        [uiIcon]="defaultErrorIcon"
+        *ngIf="hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultSuccessIcon"
+        *ngIf="!hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultPendingIcon"
+        class="fa-spin"
+        *ngIf="isPending && !disableValidationColors"
+      ></i>
+    </div>
+
+    <div
+      *ngIf="opened"
+      class="menu-wrapper"
+      [ngClass]="{ 'placement-left': menuPlacement === 'left', 'placement-right': menuPlacement === 'right' }"
+    >
+      <div class="menu-options">
+        <div
+          *ngFor="let o of options; let i = index"
+          class="option"
+          [ngClass]="{ selected: i === selectedOptionIndex }"
+          (click)="onSelectOption(i)"
+          #optionRef
+        >
+          {{ o.label }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ui-control-wrapper>

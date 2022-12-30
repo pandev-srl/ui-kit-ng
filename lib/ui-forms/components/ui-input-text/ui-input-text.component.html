@@ -1,0 +1,22 @@
+<ui-input-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+>
+  <input
+    [attr.id]="id ? id + '_input' : null"
+    [type]="type"
+    [(ngModel)]="value"
+    [autocomplete]="autocomplete || ''"
+    (ngModelChange)="onModelChange($event)"
+    (keyup)="onUserInput()"
+    (blur)="onBlur()"
+    (change)="onValueChange()"
+  />
+</ui-input-wrapper>

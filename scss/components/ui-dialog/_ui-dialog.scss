@@ -1,0 +1,67 @@
+ui-dialog {
+  @apply relative block;
+
+  > .dialog-overlay {
+    > .dialog-backdrop {
+      @apply fixed;
+    }
+
+    > .dialog-content {
+    }
+  }
+}
+
+ui-dialog-alert {
+  @apply block;
+
+  > ui-panel {
+    > ui-panel-body {
+      > .icon-container {
+      }
+
+      > .body-container {
+        > .title {
+        }
+
+        > .text {
+          > p {
+          }
+        }
+      }
+
+      > .footer-container {
+      }
+    }
+  }
+}
+
+ui-dialog-confirm {
+  @apply block;
+
+  > ui-panel {
+    > ui-panel-body {
+      > .icon-container {
+      }
+
+      > .body-container {
+        > .title {
+        }
+
+        > .text {
+          > p {
+          }
+        }
+      }
+
+      > .footer-container {
+        > .ok-button {
+        }
+
+        > .cancel-button {
+          > button {
+          }
+        }
+      }
+    }
+  }
+}

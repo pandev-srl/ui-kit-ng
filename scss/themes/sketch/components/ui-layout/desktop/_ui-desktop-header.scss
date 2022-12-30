@@ -1,0 +1,34 @@
+ui-desktop-header-container {
+  height: calc(env(safe-area-inset-top) + $ui-desktop-header-height + 2 * $ui-desktop-header-margin);
+
+  @apply bg-white;
+  @apply justify-center;
+}
+
+ui-desktop-header {
+  @apply items-center;
+  @apply justify-start;
+  @apply border;
+  @apply border-black;
+
+  margin-top: calc(env(safe-area-inset-top) + $ui-desktop-header-margin);
+  margin-right: calc(env(safe-area-inset-right) + $ui-desktop-header-margin);
+  margin-bottom: $ui-desktop-header-margin;
+  margin-left: calc(env(safe-area-inset-left) + $ui-desktop-header-margin);
+
+  @apply gap-x-2;
+  @apply px-2;
+
+  &.centered {
+    @apply max-w-for-page;
+  }
+
+  #left-container {
+  }
+
+  #center-container {
+  }
+
+  #right-container {
+  }
+}

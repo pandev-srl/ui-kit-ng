@@ -1,0 +1,23 @@
+ui-loading {
+  @apply absolute;
+
+  @apply w-full;
+  @apply h-full;
+
+  &.filter-backdrop {
+    @apply backdrop-blur-sm;
+    @apply bg-white/50;
+  }
+
+  @apply z-50;
+
+  @apply flex;
+  @apply flex-wrap;
+  @apply justify-center;
+  @apply content-center;
+
+  @apply text-black;
+
+  @apply left-0;
+  @apply top-0;
+}

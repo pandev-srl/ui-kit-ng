@@ -1,0 +1,8 @@
+body {
+  @apply min-h-screen;
+}
+
+input {
+  @apply focus-visible:outline-0;
+  @apply bg-transparent;
+}

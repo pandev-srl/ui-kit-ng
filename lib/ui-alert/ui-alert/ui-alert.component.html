@@ -1,0 +1,21 @@
+<div
+  *ngIf="currentIcon"
+  class="alert-icon"
+>
+  <i [uiIcon]="currentIcon"></i>
+</div>
+<div class="alert-content">
+  <ng-content></ng-content>
+  <h3
+    class="alert-title"
+    *ngIf="title"
+  >
+    {{ title }}
+  </h3>
+  <div
+    class="alert-description"
+    *ngIf="description"
+  >
+    {{ description }}
+  </div>
+</div>

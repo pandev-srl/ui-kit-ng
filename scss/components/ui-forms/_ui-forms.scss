@@ -1,0 +1,192 @@
+ui-checkbox,
+ui-field-display,
+ui-input-number,
+ui-input-text,
+ui-input-textarea,
+ui-select {
+  @apply block;
+
+  &[tabindex='0'] {
+    @apply focus-visible:outline-0;
+  }
+
+  > ui-input-wrapper > ui-control-wrapper > .label-wrapper,
+  > ui-control-wrapper > .label-wrapper,
+  > ui-control-wrapper > .boolean-wrapper > .label-wrapper {
+    label {
+    }
+  }
+
+  > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+  > ui-control-wrapper > .select-wrapper {
+    > .input-item {
+      > input,
+      textarea {
+        @apply focus-visible:outline-0;
+      }
+
+      > textarea {
+        &.resizable {
+        }
+      }
+
+      > input[type='number']:not(.show-browser-spins) {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          //-webkit-appearance: none;
+        }
+      }
+
+      > .field-display {
+      }
+    }
+  }
+
+  > .boolean-wrapper,
+  > ui-control-wrapper > .boolean-wrapper {
+    > .label-wrapper {
+      label {
+      }
+    }
+
+    > .icon-wrapper {
+      i[uiIcon] {
+      }
+    }
+  }
+
+  > .select-wrapper,
+  > ui-control-wrapper > .select-wrapper {
+    @apply focus-visible:outline-0;
+
+    > .handler {
+      > span {
+      }
+    }
+
+    > .caret-wrapper {
+    }
+
+    > .clear-button-wrapper {
+    }
+
+    > .label-wrapper {
+      label {
+      }
+    }
+
+    > .menu-wrapper {
+      &.placement-left {
+        @apply left-0;
+      }
+
+      &.placement-right {
+        @apply right-0;
+      }
+
+      > .menu-options {
+        > .option {
+          &.selected {
+          }
+        }
+      }
+    }
+
+    > .icon-wrapper {
+      i[uiIcon] {
+      }
+    }
+  }
+
+  > ui-control-wrapper > .boolean-wrapper,
+  > ui-control-wrapper > .select-wrapper,
+  > ui-input-wrapper > ui-control-wrapper > .input-wrapper {
+    > .validation-item {
+    }
+  }
+
+  > ui-control-wrapper > .messages-container,
+  > ui-input-wrapper > ui-control-wrapper > .messages-container {
+    > .hint-wrapper {
+    }
+
+    > .errors-wrapper {
+      > .error-item {
+      }
+    }
+  }
+
+  &.is-valid {
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+    > ui-control-wrapper > .select-wrapper {
+    }
+
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+    > ui-control-wrapper > .select-wrapper {
+      > .validation-item {
+      }
+    }
+
+    > ui-control-wrapper > .select-wrapper,
+    > ui-control-wrapper > .boolean-wrapper {
+      > .icon-wrapper,
+      > .label-wrapper {
+        label,
+        i[uiIcon] {
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+    > ui-control-wrapper > .select-wrapper {
+    }
+
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+    > ui-control-wrapper > .boolean-wrapper,
+    > ui-control-wrapper > .select-wrapper {
+      > .validation-item {
+      }
+    }
+
+    > ui-control-wrapper > .select-wrapper,
+    > ui-control-wrapper > .boolean-wrapper {
+      > .icon-wrapper,
+      > .label-wrapper {
+        label,
+        i[uiIcon] {
+        }
+      }
+    }
+  }
+
+  &.is-pending {
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
+    > ui-control-wrapper > .select-wrapper {
+    }
+
+    > ui-control-wrapper > .boolean-wrapper,
+    > ui-control-wrapper > .select-wrapper,
+    > ui-input-wrapper > ui-control-wrapper > .input-wrapper {
+      > .validation-item {
+      }
+    }
+
+    > ui-control-wrapper > .select-wrapper,
+    > ui-control-wrapper > .boolean-wrapper {
+      label,
+      i[uiIcon],
+      div > i {
+      }
+    }
+  }
+}
+
+ui-input-wrapper {
+  @apply contents;
+}
+
+ui-control-wrapper {
+  @apply contents;
+}

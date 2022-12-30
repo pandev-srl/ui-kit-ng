@@ -1,0 +1,18 @@
+<div
+  id="left-container"
+  *ngIf="leftContent"
+>
+  <ng-container [ngTemplateOutlet]="leftContent.templateRef"></ng-container>
+</div>
+<div
+  id="center-container"
+  *ngIf="centerContent"
+>
+  <ng-container [ngTemplateOutlet]="centerContent.templateRef"></ng-container>
+</div>
+<div
+  id="right-container"
+  *ngIf="rightContent"
+>
+  <ng-container [ngTemplateOutlet]="rightContent.templateRef"></ng-container>
+</div>

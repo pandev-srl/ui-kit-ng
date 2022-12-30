@@ -1,0 +1,11 @@
+ui-desktop-content-container {
+  @apply block;
+}
+
+ui-desktop-content {
+  @apply block;
+
+  &.centered {
+    @apply mx-auto;
+  }
+}

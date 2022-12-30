@@ -1,0 +1,9 @@
+ui-desktop-navbar {
+  @apply flex justify-start;
+
+  @apply w-full;
+
+  [ui-desktop-navbar-link] {
+    @apply flex items-center justify-start;
+  }
+}

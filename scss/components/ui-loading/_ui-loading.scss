@@ -1,0 +1,7 @@
+ui-loading {
+  @apply z-50;
+  @apply flex items-center align-middle gap-2;
+
+  &.filter-backdrop {
+  }
+}

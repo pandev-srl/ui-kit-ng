@@ -1,0 +1,27 @@
+ui-desktop-header-container {
+  @apply flex;
+  @apply fixed;
+
+  @apply w-full;
+}
+
+ui-desktop-header {
+  @apply w-full;
+  @apply flex;
+
+  #left-container {
+    @apply shrink;
+    @apply h-full;
+  }
+
+  #center-container {
+    @apply flex;
+    @apply grow;
+    @apply h-full;
+  }
+
+  #right-container {
+    @apply shrink;
+    @apply h-full;
+  }
+}

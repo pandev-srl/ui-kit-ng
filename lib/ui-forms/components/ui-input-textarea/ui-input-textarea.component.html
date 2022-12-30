@@ -1,0 +1,22 @@
+<ui-input-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+>
+  <textarea
+    [attr.id]="id ? id + '_input' : null"
+    [(ngModel)]="value"
+    (ngModelChange)="onModelChange($event)"
+    (keyup)="onUserInput()"
+    (blur)="onBlur()"
+    (change)="onValueChange()"
+    [rows]="rows"
+    [ngClass]="{ resizable }"
+  ></textarea>
+</ui-input-wrapper>

@@ -1,0 +1,39 @@
+[ui-button] {
+  &.btn-solid {
+    &.btn-primary {
+      @apply text-white;
+      @apply bg-black;
+      @apply border border-black;
+    }
+
+    &.btn-secondary {
+      @apply text-white;
+      @apply bg-secondary-500;
+      @apply border border-secondary-500;
+    }
+
+    &.btn-danger {
+      @apply text-white;
+      @apply bg-danger-800;
+      @apply border border-danger-800;
+    }
+
+    &.btn-success {
+      @apply text-white;
+      @apply bg-green-800;
+      @apply border border-green-800;
+    }
+
+    &.btn-warning {
+      @apply text-white;
+      @apply bg-yellow-700;
+      @apply border border-yellow-700;
+    }
+
+    &.btn-info {
+      @apply text-white;
+      @apply bg-cyan-600;
+      @apply border border-cyan-600;
+    }
+  }
+}

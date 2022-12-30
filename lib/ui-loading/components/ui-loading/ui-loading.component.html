@@ -1,0 +1,16 @@
+<i
+  [uiIcon]="uiIcon"
+  [iconSet]="uiIconSet"
+  [class]="uiIconSize"
+  [ngClass]="{ 'fa-spin': spin }"
+></i>
+<div
+  *ngIf="title"
+  class="heading-container"
+>
+  <ui-heading [size]="titleSize">
+    {{ title }}
+  </ui-heading>
+</div>
+<!--class="fa-spin fa-3x"-->
+<!--mt-3 text-center text-sm font-medium w-full-->

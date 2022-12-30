@@ -1,0 +1,27 @@
+ui-mobile-header-container {
+  height: calc(env(safe-area-inset-top) + $ui-mobile-header-height + 2 * $ui-mobile-header-margin);
+
+  @apply bg-white;
+}
+
+ui-mobile-header {
+  @apply items-center justify-start;
+  @apply border border-black;
+
+  margin-top: calc(env(safe-area-inset-top) + $ui-mobile-header-margin);
+  margin-right: calc(env(safe-area-inset-right) + $ui-mobile-header-margin);
+  margin-bottom: $ui-mobile-header-margin;
+  margin-left: calc(env(safe-area-inset-left) + $ui-mobile-header-margin);
+
+  @apply gap-x-2;
+  @apply px-2;
+
+  #left-container {
+  }
+
+  #center-container {
+  }
+
+  #right-container {
+  }
+}

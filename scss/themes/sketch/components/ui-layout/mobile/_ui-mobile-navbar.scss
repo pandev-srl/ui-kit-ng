@@ -1,0 +1,31 @@
+ui-mobile-navbar-container {
+  height: calc(env(safe-area-inset-bottom) + $ui-mobile-navbar-height + 2 * $ui-mobile-navbar-margin);
+
+  @apply bg-white;
+}
+
+ui-mobile-navbar {
+  @apply border border-black;
+
+  margin-top: $ui-mobile-navbar-margin;
+  margin-right: calc(env(safe-area-inset-right) + $ui-mobile-navbar-margin);
+  margin-bottom: calc(env(safe-area-inset-bottom) + $ui-mobile-navbar-margin);
+  margin-left: calc(env(safe-area-inset-left) + $ui-mobile-navbar-margin);
+
+  [ui-mobile-navbar-link] {
+    @apply p-2;
+    @apply text-center;
+
+    i[uiIcon] {
+      @apply fa-xl;
+    }
+
+    span {
+      @apply text-sm;
+    }
+
+    &.active {
+      @apply border-b;
+    }
+  }
+}

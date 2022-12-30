@@ -1,0 +1,27 @@
+[ui-button] {
+  &.btn-inline {
+    &.btn-primary {
+      @apply text-black;
+    }
+
+    &.btn-secondary {
+      @apply text-secondary-500;
+    }
+
+    &.btn-danger {
+      @apply text-danger-800;
+    }
+
+    &.btn-success {
+      @apply text-green-800;
+    }
+
+    &.btn-warning {
+      @apply text-yellow-700;
+    }
+
+    &.btn-info {
+      @apply text-cyan-600;
+    }
+  }
+}

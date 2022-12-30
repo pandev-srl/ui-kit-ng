@@ -1,0 +1,26 @@
+ui-mobile-navbar-container {
+  @apply flex;
+  @apply fixed;
+
+  @apply w-full;
+
+  &.top {
+    @apply top-0;
+  }
+
+  &.bottom {
+    @apply bottom-0;
+  }
+}
+
+ui-mobile-navbar {
+  @apply flex justify-center;
+
+  @apply w-full;
+
+  [ui-mobile-navbar-link] {
+    @apply flex flex-col items-center justify-end;
+
+    @apply flex-grow flex-shrink basis-0 w-0;
+  }
+}

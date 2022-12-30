@@ -1,0 +1,26 @@
+<ui-input-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+>
+  <input
+    type="number"
+    [attr.id]="id ? id + '_input' : null"
+    [(ngModel)]="value"
+    [autocomplete]="autocomplete || ''"
+    [min]="min"
+    [max]="max"
+    [step]="step"
+    [ngClass]="{ 'show-browser-spins': showBrowserSpins }"
+    (ngModelChange)="onModelChange($event)"
+    (keyup)="onUserInput()"
+    (blur)="onBlur()"
+    (change)="onValueChange()"
+  />
+</ui-input-wrapper>

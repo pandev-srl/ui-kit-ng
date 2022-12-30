@@ -1,0 +1,44 @@
+<ui-control-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+  [useVerticalLabel]="false"
+  (click)="onClick()"
+>
+  <div class="boolean-wrapper">
+    <div class="icon-wrapper">
+      <div *ngIf="value">
+        <i uiIcon="fa-check-square fa-lg"></i>
+      </div>
+      <div *ngIf="value === false">
+        <i uiIcon="fa-square fa-lg"></i>
+      </div>
+      <div *ngIf="value === null">
+        <i uiIcon="fa-minus-square fa-lg"></i>
+      </div>
+    </div>
+    <div class="label-wrapper">
+      <label
+        *ngIf="label"
+        [for]="id + '_checkbox'"
+      >
+        {{ label }}
+      </label>
+    </div>
+    <div
+      class="spin-icon-wrapper"
+      *ngIf="isPending && !disableValidationColors"
+    >
+      <i
+        [uiIcon]="defaultPendingIcon"
+        class="fa-spin"
+      ></i>
+    </div>
+  </div>
+</ui-control-wrapper>

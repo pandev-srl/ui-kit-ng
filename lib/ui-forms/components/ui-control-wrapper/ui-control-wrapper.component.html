@@ -1,0 +1,32 @@
+<div
+  *ngIf="useVerticalLabel"
+  class="label-wrapper"
+>
+  <label
+    *ngIf="label"
+    class="form-input-label"
+    [for]="id + '_input'"
+  >
+    {{ label }}
+  </label>
+</div>
+<ng-content></ng-content>
+<div class="messages-container">
+  <div
+    class="hint-wrapper"
+    *ngIf="hint"
+  >
+    <span>{{ hint }}</span>
+  </div>
+  <div
+    class="errors-wrapper"
+    *ngIf="isDirtyOrTouched && errors"
+  >
+    <div
+      class="error-item"
+      *ngFor="let error of printErrors"
+    >
+      <span>{{ error }}</span>
+    </div>
+  </div>
+</div>
