@@ -1,4 +1,5 @@
 export * from './ui-forms.module';
+export * from './models';
 
 export * from './components/ui-input-wrapper/ui-input-wrapper.component';
 export * from './components/ui-input-text/ui-input-text.component';
