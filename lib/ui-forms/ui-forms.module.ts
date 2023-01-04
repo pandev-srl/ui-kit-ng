@@ -19,6 +19,7 @@ import { UiControlWrapperComponent } from './components/ui-control-wrapper/ui-co
 import { UiCheckboxComponent } from './components/ui-checkbox/ui-checkbox.component';
 import { UiSelectComponent } from './components/ui-select/ui-select.component';
 import { UiClickOutsideModule } from '../ui-click-outside';
+import { UiToSelectOptionPipe } from './directives/ui-to-select-option.pipe';
 
 const exportedComponents = [
   UiCheckboxComponent,
@@ -29,6 +30,7 @@ const exportedComponents = [
   UiInputTextareaComponent,
   UiInputWrapperComponent,
   UiSelectComponent,
+  UiToSelectOptionPipe,
 ];
 
 @NgModule({
