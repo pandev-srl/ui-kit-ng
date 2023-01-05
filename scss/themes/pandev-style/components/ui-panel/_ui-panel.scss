@@ -1,0 +1,59 @@
+ui-panel {
+  @apply flex flex-col;
+  @apply relative;
+
+  @apply rounded-lg;
+
+  @apply bg-secondary-100;
+  @apply dark:bg-secondary-700;
+
+  @apply drop-shadow;
+  @apply dark:shadow-none;
+
+  &.is-loading {
+    @apply overflow-hidden;
+    @apply min-h-2/5;
+  }
+
+  &.is-transparent {
+    @apply bg-transparent;
+  }
+
+  ui-panel-header {
+    @apply block;
+    @apply py-3;
+    @apply px-3;
+    @apply rounded-t-lg;
+    @apply border-b;
+    @apply border-secondary-200;
+    @apply dark:border-secondary-800;
+  }
+
+  ui-panel-body {
+    @apply block;
+    @apply grow;
+
+    &.without-header {
+      @apply rounded-t-lg;
+    }
+
+    &.without-footer {
+      @apply rounded-b-lg;
+    }
+
+    &.is-padded {
+      @apply py-3;
+      @apply px-3;
+    }
+  }
+
+  ui-panel-footer {
+    @apply py-3;
+    @apply px-3;
+    @apply block;
+    @apply border-t;
+    @apply rounded-b-lg;
+    @apply border-secondary-200;
+    @apply dark:border-secondary-800;
+  }
+}

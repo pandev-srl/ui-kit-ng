@@ -1,0 +1,236 @@
+[ui-button] {
+  &.btn-solid {
+    &.btn-primary {
+      $target: 'primary';
+      @apply text-black;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      &:focus-visible {
+        @apply outline-1 outline-#{$target}-800;
+        @apply ring-offset-primary-800 shadow-none;
+      }
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+
+      &:focus-visible {
+        @apply outline-1 outline-#{$target}-800;
+      }
+    }
+
+    &.btn-secondary {
+      $target: 'secondary';
+      @apply text-white;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+    }
+
+    &.btn-danger {
+      $target: 'danger';
+      @apply text-black;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+    }
+
+    &.btn-success {
+      $target: 'success';
+      @apply text-black;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+    }
+
+    &.btn-warning {
+      $target: 'warning';
+      @apply text-black;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+    }
+
+    &.btn-info {
+      $target: 'info';
+      @apply text-black;
+
+      // Light
+      @apply border-#{$target}-400;
+      @apply bg-#{$target}-400;
+      @apply hover:border-#{$target}-500;
+      @apply hover:bg-#{$target}-500;
+      @apply active:border-#{$target}-700;
+      @apply active:bg-#{$target}-700;
+
+      // Dark
+      @apply dark:border-#{$target}-500;
+      @apply dark:bg-#{$target}-500;
+      @apply dark:hover:border-#{$target}-600;
+      @apply dark:hover:bg-#{$target}-600;
+      @apply dark:active:border-#{$target}-700;
+      @apply dark:active:bg-#{$target}-700;
+    }
+
+    &:disabled {
+      &.btn-primary {
+        $target: 'primary';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+
+      &.btn-secondary {
+        $target: 'secondary';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+
+      &.btn-danger {
+        $target: 'danger';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+
+      &.btn-success {
+        $target: 'success';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+
+      &.btn-warning {
+        $target: 'warning';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+
+      &.btn-info {
+        $target: 'info';
+
+        // Light
+        @apply border-#{$target}-400;
+        @apply bg-#{$target}-400;
+        @apply hover:border-#{$target}-400;
+        @apply hover:bg-#{$target}-400;
+
+        // Dark
+        @apply dark:border-#{$target}-500;
+        @apply dark:bg-#{$target}-500;
+        @apply dark:hover:border-#{$target}-500;
+        @apply dark:hover:bg-#{$target}-500;
+      }
+    }
+  }
+}

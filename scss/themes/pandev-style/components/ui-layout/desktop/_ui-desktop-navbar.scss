@@ -1,0 +1,35 @@
+ui-desktop-navbar {
+  @apply gap-0;
+
+  [ui-desktop-navbar-link] {
+    @apply flex gap-2;
+
+    @apply py-2;
+    @apply px-3.5;
+    @apply text-center;
+    @apply text-secondary-800;
+    @apply tracking-wide;
+    @apply dark:text-secondary-300;
+
+    @apply my-2.5;
+    @apply mx-1.5;
+
+    @apply rounded;
+
+    @apply transition-all;
+    @apply duration-300;
+
+    i[uiIcon] {
+      @apply fa-xl;
+    }
+
+    span {
+      @apply text-sm;
+    }
+
+    &.active {
+      @apply text-primary-600;
+      @apply dark:text-primary-400;
+    }
+  }
+}

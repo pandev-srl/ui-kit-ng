@@ -1,0 +1,63 @@
+[ui-button] {
+  @apply rounded-md;
+  //@apply transition-all;
+  //@apply duration-200;
+  @apply tracking-wide;
+
+  @apply disabled:cursor-not-allowed;
+
+  &.btn-xl {
+    @apply min-h-14;
+    @apply px-5;
+    @apply py-2;
+    @apply text-xl;
+  }
+
+  &.btn-lg {
+    @apply min-h-12;
+    @apply px-3.5;
+    @apply py-2;
+    @apply text-lg;
+  }
+
+  &.btn-md {
+    @apply min-h-10;
+    @apply px-3;
+    @apply py-1.5;
+    @apply text-base;
+  }
+
+  &.btn-sm {
+    @apply h-8;
+    @apply px-2.5;
+    @apply py-1;
+    @apply text-sm;
+  }
+
+  &.btn-xs {
+    @apply min-h-6;
+    @apply px-2;
+    @apply py-0.5;
+    @apply text-xs;
+  }
+
+  &[disabled] {
+    @apply cursor-not-allowed;
+  }
+
+  &.btn-outline {
+    &.btn-xl,
+    &.btn-lg {
+      @apply border-2;
+    }
+
+    &.btn-md {
+      @apply border-1.5;
+    }
+
+    &.btn-sm,
+    &.btn-xs {
+      @apply border-1;
+    }
+  }
+}
