@@ -20,8 +20,6 @@ export class UiControlWrapperComponent {
   get printErrors(): string[] {
     const result: string[] = [];
 
-    console.log();
-
     for (let err in this.errors) {
       if (typeof this.errors[err] === 'boolean') {
         result.push(this.errorsMap[err]);

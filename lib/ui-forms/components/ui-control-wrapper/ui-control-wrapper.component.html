@@ -11,7 +11,10 @@
   </label>
 </div>
 <ng-content></ng-content>
-<div class="messages-container">
+<div
+  *ngIf="isDirtyOrTouched && printErrors.length > 0"
+  class="messages-container"
+>
   <div
     class="hint-wrapper"
     *ngIf="hint"
