@@ -72,7 +72,16 @@
       class="menu-wrapper"
       [ngClass]="{ 'placement-left': menuPlacement === 'left', 'placement-right': menuPlacement === 'right' }"
     >
-      <div class="menu-options">
+      <div
+        *ngIf="loading"
+        class="menu-loading"
+      >
+        <ui-loading [filterBackdrop]="false"></ui-loading>
+      </div>
+      <div
+        *ngIf="!loading"
+        class="menu-options"
+      >
         <div
           *ngFor="let o of options; let i = index"
           class="option"

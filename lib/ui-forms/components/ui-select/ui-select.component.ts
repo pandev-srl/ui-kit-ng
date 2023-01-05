@@ -10,7 +10,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   Output,
   QueryList,
   SimpleChanges,
@@ -55,6 +54,7 @@ export class UiSelectComponent
   @Input() openOnKeyUpDown = true;
   @Input() options: UiFormOption[] = [];
   @Input() prompt = 'Select an option...';
+  @Input() loading = false;
 
   selectedOption: UiFormOption | null = null;
   selectedOptionIndex: number | null = null;
@@ -206,8 +206,8 @@ export class UiSelectComponent
   }
 
   private resetSelectState(): void {
-    if (this.selectedOption) {
-      this.selectedOption = this.findOptionByValue(this.selectedOption.value);
+    if (this.value) {
+      this.selectedOption = this.findOptionByValue(this.value);
       this.selectedOptionIndex = this.selectedOption ? this.options.indexOf(this.selectedOption) : null;
     }
 
@@ -215,7 +215,9 @@ export class UiSelectComponent
     this.writeValue(this.selectedOption?.value || null);
 
     this.control?.markAsPristine();
-    this.control?.markAsTouched();
+    this.control?.markAsUntouched();
+
+    this.setupStatus();
   }
 
   private findOptionByValue(value: any): UiFormOption | null {

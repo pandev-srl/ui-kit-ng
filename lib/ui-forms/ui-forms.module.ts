@@ -20,6 +20,7 @@ import { UiCheckboxComponent } from './components/ui-checkbox/ui-checkbox.compon
 import { UiSelectComponent } from './components/ui-select/ui-select.component';
 import { UiClickOutsideModule } from '../ui-click-outside';
 import { UiToSelectOptionPipe } from './directives/ui-to-select-option.pipe';
+import { UiLoadingModule } from '../ui-loading';
 
 const exportedComponents = [
   UiCheckboxComponent,
@@ -35,7 +36,7 @@ const exportedComponents = [
 
 @NgModule({
   declarations: [...exportedComponents],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, UiIconModule, UiClickOutsideModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, UiIconModule, UiClickOutsideModule, UiLoadingModule],
   exports: [...exportedComponents],
   providers: [
     {
