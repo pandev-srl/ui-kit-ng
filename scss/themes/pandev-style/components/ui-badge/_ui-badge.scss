@@ -1,0 +1,104 @@
+ui-badge {
+  @apply items-center;
+  @apply px-2;
+  @apply py-0.5;
+  @apply rounded;
+  @apply text-xs;
+  @apply font-medium;
+
+  @apply text-black;
+
+  //@apply border-0.5;
+  //@apply border-secondary-100;
+  //@apply dark:border-secondary-800;
+
+  &.badge-primary {
+    @apply bg-primary-100;
+    @apply dark:bg-primary-100;
+
+    .badge-animation {
+      @apply bg-primary-400;
+      @apply dark:bg-primary-800;
+    }
+
+    .badge-status {
+      @apply bg-primary-500;
+      @apply dark:bg-primary-500;
+    }
+  }
+
+  &.badge-secondary {
+    @apply bg-secondary-100;
+    @apply dark:bg-secondary-100;
+
+    .badge-animation {
+      @apply bg-secondary-400;
+      @apply dark:bg-secondary-800;
+    }
+
+    .badge-status {
+      @apply bg-secondary-500;
+      @apply dark:bg-secondary-500;
+    }
+  }
+
+  &.badge-success {
+    @apply bg-success-100;
+    @apply dark:bg-success-100;
+
+    .badge-animation {
+      @apply bg-success-400;
+      @apply dark:bg-success-800;
+    }
+
+    .badge-status {
+      @apply bg-success-500;
+      @apply dark:bg-success-500;
+    }
+  }
+
+  &.badge-info {
+    @apply bg-info-100;
+    @apply dark:bg-info-100;
+
+    .badge-animation {
+      @apply bg-info-400;
+      @apply dark:bg-info-800;
+    }
+
+    .badge-status {
+      @apply bg-info-500;
+      @apply dark:bg-info-500;
+    }
+  }
+
+  &.badge-warning {
+    @apply bg-warning-100;
+    @apply dark:bg-warning-100;
+
+    .badge-animation {
+      @apply bg-warning-400;
+      @apply dark:bg-warning-800;
+    }
+
+    .badge-status {
+      @apply bg-warning-500;
+      @apply dark:bg-warning-500;
+    }
+  }
+
+  &.badge-danger {
+    @apply bg-danger-100;
+    @apply dark:bg-danger-100;
+
+    .badge-animation {
+      @apply bg-danger-400;
+      @apply dark:bg-danger-800;
+    }
+
+    .badge-status {
+      @apply bg-danger-500;
+      @apply dark:bg-danger-500;
+    }
+  }
+}

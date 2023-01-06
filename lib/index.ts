@@ -8,6 +8,7 @@ export * from './ui-kit.module';
 // Components
 export * from './ui-action-messages';
 export * from './ui-alert';
+export * from './ui-badge';
 export * from './ui-button';
 export * from './ui-dialog';
 export * from './ui-dropdown';

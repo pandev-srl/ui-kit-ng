@@ -1,0 +1,51 @@
+ui-badge {
+  @apply inline-flex;
+
+  &.badge-primary {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+
+  &.badge-secondary {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+
+  &.badge-success {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+
+  &.badge-info {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+
+  &.badge-warning {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+
+  &.badge-danger {
+    .badge-animation {
+    }
+
+    .badge-status {
+    }
+  }
+}

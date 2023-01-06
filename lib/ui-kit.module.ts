@@ -12,10 +12,12 @@ import { UiAlertModule } from './ui-alert';
 import { UiFormsModule } from './ui-forms';
 import { UiDialogModule } from './ui-dialog';
 import { UiActionMessagesComponent } from './ui-action-messages';
+import { UiBadgeModule } from './ui-badge';
 
 export const exportedModules = [
   UiActionMessagesComponent,
   UiAlertModule,
+  UiBadgeModule,
   UiButtonModule,
   UiClickOutsideModule,
   UiDialogModule,
