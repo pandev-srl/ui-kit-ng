@@ -239,7 +239,7 @@ export class UiSelectComponent
   private handleKeyQuickSelect(key: string): void {
     clearTimeout(this.searchTimeout);
     this.quickSelectTerm += key;
-    this.searchTimeout = setTimeout(() => {
+    this.searchTimeout = window.setTimeout(() => {
       const parsedTerm = this.quickSelectTerm.toLowerCase();
       for (let i = 0; i < this.options.length; i++) {
         if (this.options[i].label.toLowerCase().includes(parsedTerm)) {

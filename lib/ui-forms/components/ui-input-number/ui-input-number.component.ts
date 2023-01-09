@@ -35,13 +35,13 @@ export class UiInputNumberComponent extends UiAbstractInputDirective<number | nu
   }
 
   onUserInput(): void {
-    setTimeout(() => {
+    window.setTimeout(() => {
       this.userInput.emit(super.value || undefined);
     }, 20);
   }
 
   onValueChange(): void {
-    setTimeout(() => {
+    window.setTimeout(() => {
       this.valueChange.emit(super.value || undefined);
     }, 20);
   }
