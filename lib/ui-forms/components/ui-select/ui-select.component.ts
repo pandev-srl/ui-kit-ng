@@ -17,7 +17,6 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { UiAbstractInputDirective } from '../../directives/ui-abstract-input.directive';
-import { SubscriptionManagerService } from '@/shared';
 import { UiInputErrorsService } from '../../services/ui-input-errors.service';
 import {
   UI_INPUT_VALIDATION_ERROR_ICON,
@@ -35,7 +34,6 @@ import { first, Subscription } from 'rxjs';
   templateUrl: './ui-select.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    SubscriptionManagerService,
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: UiSelectComponent,
