@@ -318,3 +318,25 @@ ui-select {
     }
   }
 }
+
+ui-single-file-dropzone {
+  @apply flex;
+  @apply h-full;
+  @apply relative;
+
+  .dropzone {
+    @apply w-full h-full;
+
+    @apply bg-gray-100;
+
+    @apply p-3;
+    @apply grid grid-cols-1 items-center align-middle justify-center;
+
+    @apply text-center;
+  }
+
+  input[type='file'] {
+    @apply cursor-pointer;
+    @apply absolute w-full h-full opacity-0;
+  }
+}

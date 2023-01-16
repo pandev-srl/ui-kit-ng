@@ -7,7 +7,7 @@ ui-panel {
   @apply bg-secondary-100;
   @apply dark:bg-secondary-700;
 
-  @apply drop-shadow;
+  @apply shadow;
   @apply dark:shadow-none;
 
   &.is-loading {

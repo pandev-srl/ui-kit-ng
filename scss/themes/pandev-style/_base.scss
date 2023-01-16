@@ -6,8 +6,8 @@ body {
   @apply bg-white;
   @apply dark:bg-secondary-900;
 
-  @apply text-black;
-  @apply dark:text-secondary-200;
+  @apply text-secondary-700;
+  @apply dark:text-secondary-300;
 
   font-family: 'Poppins', sans-serif;
 }
@@ -26,12 +26,13 @@ p {
   @apply text-base;
   @apply tracking-wide;
   @apply text-secondary-700;
-  @apply dark:text-secondary-400;
+  @apply dark:text-secondary-300;
 }
 
 a {
   @apply text-base;
-  @apply text-primary-500;
+  @apply text-primary-600;
+  @apply dark:text-primary-400;
   @apply cursor-pointer;
   @apply hover:text-primary-700;
 }

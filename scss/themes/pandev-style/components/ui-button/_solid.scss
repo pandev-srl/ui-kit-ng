@@ -2,7 +2,7 @@
   &.btn-solid {
     &.btn-primary {
       $target: 'primary';
-      @apply text-black;
+      @apply text-secondary-900;
 
       // Light
       @apply border-#{$target}-400;
@@ -32,7 +32,7 @@
 
     &.btn-secondary {
       $target: 'secondary';
-      @apply text-white;
+      @apply text-secondary-100;
 
       // Light
       @apply border-#{$target}-400;
