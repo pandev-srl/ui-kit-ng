@@ -18,4 +18,5 @@ export * from './ui-heading';
 export * from './ui-icon';
 export * from './ui-layout';
 export * from './ui-loading';
+export * from './ui-month-chooser';
 export * from './ui-panel';

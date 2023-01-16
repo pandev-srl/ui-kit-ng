@@ -1,0 +1,23 @@
+ui-month-chooser {
+  @apply p-2;
+
+  @apply rounded-lg;
+
+  @apply bg-secondary-100;
+  @apply dark:bg-secondary-700;
+
+  @apply shadow;
+  @apply dark:shadow-none;
+
+  @apply flex w-full justify-center items-center;
+
+  > div {
+    > .left-arrow {
+      @apply px-3 cursor-pointer;
+    }
+
+    > .right-arrow {
+      @apply px-3 cursor-pointer;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div
+  *ngIf="monthNumber && year"
+  class="contents"
+>
+  <div
+    (click)="previous.emit()"
+    class="left-arrow"
+  >
+    <a uiIcon="fa-angle-left fa-lg"></a>
+  </div>
+  <div
+    (click)="next.emit()"
+    class="right-arrow"
+  >
+    <a uiIcon="fa-angle-right fa-lg"></a>
+  </div>
+  <ui-heading
+    size="h4"
+    class="grow text-left"
+  >
+    {{ monthNumber | monthNumberToText | titlecase }} {{ year }}
+  </ui-heading>
+</div>
