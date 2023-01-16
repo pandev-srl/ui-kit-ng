@@ -1,6 +1,6 @@
 import { ComponentRef, ViewContainerRef } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { UiDialogComponent } from '@/ui-kit';
+import { UiDialogComponent } from '../components/ui-dialog/ui-dialog.component';
 import { UiDialogService } from '../services/ui-dialog.service';
 
 export interface UiDialogOptions {

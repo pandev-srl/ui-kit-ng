@@ -9,7 +9,7 @@ import {
   Type,
 } from '@angular/core';
 import { UiDialogOptions, UiDialogRef, UiDialogRefImpl } from '../models';
-import { UiDialogComponent } from '@/ui-kit';
+import { UiDialogComponent } from '../components/ui-dialog/ui-dialog.component';
 import { UiDialogRefStoreService } from './ui-dialog-ref-store.service';
 
 @Injectable()

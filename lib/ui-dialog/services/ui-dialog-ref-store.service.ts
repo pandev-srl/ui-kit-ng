@@ -1,5 +1,5 @@
 import { ComponentRef, Injectable } from '@angular/core';
-import { UiDialogComponent } from '@/ui-kit';
+import { UiDialogComponent } from '../components/ui-dialog/ui-dialog.component';
 
 @Injectable({
   providedIn: 'root',

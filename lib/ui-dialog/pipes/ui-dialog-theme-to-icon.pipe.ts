@@ -1,6 +1,7 @@
 import { Inject, Pipe, PipeTransform } from '@angular/core';
-import { UI_DIALOG_ALERT_DEFAULT_ICONS, UiDialogDefaultIconsMap, UiTheme } from '@/ui-kit';
+import { UI_DIALOG_ALERT_DEFAULT_ICONS, UiDialogDefaultIconsMap } from '../models/public-api';
 import { UI_DEFAULT_ICON_SET } from '../../ui-icon/models';
+import { UiTheme } from '../../models';
 
 @Pipe({
   name: 'uiDialogThemeToIcon',
