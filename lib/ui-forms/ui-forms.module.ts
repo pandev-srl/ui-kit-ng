@@ -18,9 +18,10 @@ import { UiFieldDisplayComponent } from './components/ui-field-display/ui-field-
 import { UiControlWrapperComponent } from './components/ui-control-wrapper/ui-control-wrapper.component';
 import { UiCheckboxComponent } from './components/ui-checkbox/ui-checkbox.component';
 import { UiSelectComponent } from './components/ui-select/ui-select.component';
-import { UiClickOutsideModule } from '../ui-click-outside';
-import { UiToSelectOptionPipe } from './directives/ui-to-select-option.pipe';
 import { UiLoadingModule } from '../ui-loading';
+import { UiToSelectOptionPipe } from './pipes/ui-to-select-option.pipe';
+import { UiClickOutsideModule } from '../ui-click-outside';
+import { UiSingleFileDropzoneComponent } from './components/ui-single-file-dropzone/ui-single-file-dropzone.component';
 
 const exportedComponents = [
   UiCheckboxComponent,
@@ -32,6 +33,7 @@ const exportedComponents = [
   UiInputWrapperComponent,
   UiSelectComponent,
   UiToSelectOptionPipe,
+  UiSingleFileDropzoneComponent,
 ];
 
 @NgModule({

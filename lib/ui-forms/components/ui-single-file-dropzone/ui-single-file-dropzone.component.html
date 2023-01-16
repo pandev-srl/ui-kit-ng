@@ -1,0 +1,23 @@
+<div class="dropzone">
+  <div>
+    <i
+      uiIcon="fa-file-spreadsheet"
+      class="fa-4x"
+    ></i>
+    <div class="text-lg mt-3">
+      <p *ngIf="fileName">{{ fileName }}</p>
+      <p *ngIf="!value">Nessun file selezionato</p>
+      <p
+        *ngIf="progress"
+        class="text-xs mt-3"
+      >
+        {{ progress }}%
+      </p>
+    </div>
+  </div>
+</div>
+
+<input
+  type="file"
+  (change)="onFileChanged($event)"
+/>
