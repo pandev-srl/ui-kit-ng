@@ -328,6 +328,7 @@ ui-single-file-dropzone {
     @apply w-full h-full;
 
     @apply bg-gray-100;
+    @apply dark:bg-gray-600;
 
     @apply p-3;
     @apply grid grid-cols-1 items-center align-middle justify-center;
