@@ -7,12 +7,15 @@ ui-panel {
   @apply bg-secondary-100;
   @apply dark:bg-secondary-700;
 
-  @apply shadow;
-  @apply dark:shadow-none;
+  &.shadowed {
+    @apply shadow;
+    @apply dark:shadow-none;
+  }
 
   &.is-loading {
     @apply overflow-hidden;
-    @apply min-h-2/5;
+    @apply shadow;
+    @apply dark:shadow-none;
   }
 
   &.is-transparent {

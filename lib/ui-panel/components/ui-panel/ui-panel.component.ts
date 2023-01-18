@@ -22,6 +22,8 @@ export class UiPanelComponent implements OnInit, AfterContentInit {
   @Input() @HostBinding('class.is-loading') loading = false;
   @Input() loadingTitle: string | null = null;
 
+  @Input() @HostBinding('class.shadowed') shadowed = true;
+
   @ContentChild(UiPanelHeaderComponent) header: UiPanelHeaderComponent | undefined;
   @ContentChild(UiPanelBodyComponent) body: UiPanelBodyComponent | undefined;
   @ContentChild(UiPanelFooterComponent) footer: UiPanelFooterComponent | undefined;
