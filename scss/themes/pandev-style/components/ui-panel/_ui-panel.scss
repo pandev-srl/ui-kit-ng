@@ -29,7 +29,7 @@ ui-panel {
     @apply rounded-t-lg;
     @apply border-b;
     @apply border-secondary-200;
-    @apply dark:border-secondary-800;
+    @apply dark:border-secondary-500;
   }
 
   ui-panel-body {
@@ -57,6 +57,6 @@ ui-panel {
     @apply border-t;
     @apply rounded-b-lg;
     @apply border-secondary-200;
-    @apply dark:border-secondary-800;
+    @apply dark:border-secondary-500;
   }
 }
