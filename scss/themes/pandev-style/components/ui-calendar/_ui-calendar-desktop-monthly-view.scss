@@ -1,0 +1,116 @@
+ui-calendar-desktop-monthly-view {
+  @apply text-sm;
+  @apply rounded-md;
+  @apply relative;
+
+  table {
+    @apply w-full;
+    @apply table-fixed;
+    @apply top;
+
+    @apply border;
+    @apply border-secondary-200;
+    @apply dark:border-secondary-500;
+
+    td {
+      @apply align-top;
+
+      @apply bg-white;
+      @apply dark:bg-secondary-900;
+
+      @apply border;
+      @apply border-collapse;
+      @apply border-secondary-200;
+      @apply dark:border-secondary-500;
+    }
+
+    td.header-cell {
+      @apply p-2;
+
+      @apply text-center;
+    }
+
+    td.body-cell {
+      @apply h-[6.875rem] max-h-[6.875rem];
+
+      &.is-previous-month {
+        @apply bg-secondary-100;
+        @apply dark:bg-secondary-700;
+      }
+
+      &.is-next-month {
+        @apply bg-secondary-100;
+        @apply dark:bg-secondary-700;
+      }
+
+      > .day-container {
+        > .day-number-container {
+          @apply h-[2.063rem] max-h-[2.063rem];
+          @apply p-1;
+
+          > .day-number-text {
+            @apply w-[25px] h-[25px];
+
+            @apply flex items-center justify-center;
+
+            @apply text-xs select-none;
+
+            @apply bg-secondary-100;
+            @apply dark:bg-secondary-600;
+
+            @apply rounded-full;
+
+            @apply cursor-pointer;
+
+            &.is-today {
+              @apply bg-primary-200;
+              @apply dark:bg-primary-200 dark:text-primary-800;
+            }
+          }
+        }
+
+        > .day-events-container {
+          @apply w-full;
+          @apply h-[5.312rem];
+
+          @apply grow;
+          @apply relative;
+
+          > .default-event {
+            @apply w-[100%] overflow-visible;
+            @apply h-[1rem];
+            @apply absolute z-[100];
+            @apply flex justify-between align-baseline items-center;
+            @apply gap-1;
+
+            @apply px-1.5 py-0.5;
+
+            &:not(.colored) {
+              @apply bg-gray-200;
+            }
+
+            @apply rounded-sm;
+
+            @apply text-left text-xxs select-none;
+            @apply cursor-pointer;
+
+            > .left {
+              @apply shrink;
+              @apply text-xxxs;
+              @apply align-baseline;
+            }
+
+            > .center {
+              @apply grow;
+              @apply truncate;
+            }
+
+            > .right {
+              @apply shrink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

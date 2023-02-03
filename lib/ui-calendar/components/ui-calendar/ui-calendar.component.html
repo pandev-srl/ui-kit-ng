@@ -1,0 +1,7 @@
+<ui-calendar-monthly-view
+  [refDate]="refDate"
+  (refDateChange)="refDateChange.emit($event)"
+  [events]="events"
+  [initialWeekDay]="initialWeekDay"
+  (eventClicked)="eventClicked.emit($event)"
+></ui-calendar-monthly-view>

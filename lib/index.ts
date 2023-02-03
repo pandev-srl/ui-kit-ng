@@ -10,6 +10,7 @@ export * from './ui-action-messages';
 export * from './ui-alert';
 export * from './ui-badge';
 export * from './ui-button';
+export * from './ui-calendar';
 export * from './ui-click-outside';
 export * from './ui-dialog';
 export * from './ui-dropdown';

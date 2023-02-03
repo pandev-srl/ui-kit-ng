@@ -1,0 +1,17 @@
+ui-calendar-desktop-monthly-view-toolbar {
+  @apply flex gap-2 items-center content-center;
+
+  > .left {
+    @apply shrink;
+
+    @apply flex;
+  }
+
+  > .center {
+    @apply grow;
+  }
+
+  > .right {
+    @apply shrink;
+  }
+}

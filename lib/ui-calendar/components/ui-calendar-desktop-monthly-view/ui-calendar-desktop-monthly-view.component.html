@@ -1,0 +1,82 @@
+<div class="grid grid-cols-1 gap-3">
+  <ui-calendar-desktop-monthly-view-toolbar
+    [(refDate)]="refDate"
+    (previous)="onPrevious()"
+    (today)="onToday()"
+    (next)="onNext()"
+  ></ui-calendar-desktop-monthly-view-toolbar>
+
+  <table>
+    <thead>
+      <tr>
+        <td
+          *ngFor="let day of weekDays"
+          class="header-cell"
+        >
+          {{ day | titlecase }}
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let row of daysOfMonthMatrix; let i = index">
+        <td
+          *ngFor="let day of daysOfMonthMatrix[i]; let j = index"
+          [ngClass]="{
+            'is-previous-month': day.isInPreviousMonth,
+            'is-next-month': day.isInNextMonth
+          }"
+          class="body-cell"
+        >
+          <div class="day-container">
+            <div class="day-number-container">
+              <div
+                [ngClass]="{
+                  'is-today': day.isToday
+                }"
+                class="day-number-text"
+              >
+                {{ day.dateTime.day }}
+              </div>
+            </div>
+            <div
+              *ngIf="eventsByDateToPrint[i][j] as eventList"
+              class="day-events-container"
+              [ngStyle]="{ height: eventList.length + eventList.length * 0.125 + 'rem' }"
+            >
+              <ng-container *ngFor="let e of eventList; let i = index">
+                <div
+                  *ngIf="e && e.cellsToCover != 0"
+                  [class]="'' + e.event.color.light.twClass + ' ' + e.event.color.dark.twClass + ' colored '"
+                  [ngClass]="{ 'is-all-day': e.event.allDay }"
+                  [ngStyle]="{
+                    top: 'calc(1px + ' + (i + i * 0.125) + 'rem)',
+                    width:
+                      'calc(' +
+                      100 * e.cellsToCover +
+                      '%' +
+                      ' + ' +
+                      0.125 * (e.cellsToCover - 1) +
+                      'rem + ' +
+                      (e.cellsToCover - 1) +
+                      'px)'
+                  }"
+                  class="default-event"
+                  (click)="eventClicked.emit(e.event)"
+                >
+                  <div
+                    *ngIf="!e.event.allDay"
+                    class="left"
+                  >
+                    {{ e.event.startDateTime.toFormat('HH:mm') }}
+                  </div>
+                  <div class="center">{{ e.event.description }}</div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

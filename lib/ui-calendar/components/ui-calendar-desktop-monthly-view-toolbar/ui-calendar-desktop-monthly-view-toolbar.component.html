@@ -1,0 +1,13 @@
+<div class="center">
+  <ui-heading size="h4">
+    <span class="font-bold">{{ refDate.monthLong | titlecase }}&nbsp;</span>
+    <span>{{ refDate.year }}</span>
+  </ui-heading>
+</div>
+<div class="right">
+  <ui-calendar-actions
+    (next)="onNext()"
+    (previous)="onPrevious()"
+    (today)="onToday()"
+  ></ui-calendar-actions>
+</div>

@@ -1,0 +1,16 @@
+<ui-calendar-desktop-monthly-view
+  *ngIf="isDesktop$ | async"
+  [refDate]="refDate"
+  (refDateChange)="refDateChange.emit($event)"
+  [events]="events"
+  [initialWeekDay]="initialWeekDay"
+  (eventClicked)="eventClicked.emit($event)"
+></ui-calendar-desktop-monthly-view>
+<ui-calendar-mobile-monthly-view
+  *ngIf="isMobile$ | async"
+  [refDate]="refDate"
+  (refDateChange)="refDateChange.emit($event)"
+  [events]="events"
+  [initialWeekDay]="initialWeekDay"
+  (eventClicked)="eventClicked.emit($event)"
+></ui-calendar-mobile-monthly-view>
