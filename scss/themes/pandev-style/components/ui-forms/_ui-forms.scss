@@ -4,7 +4,7 @@ ui-input-number,
 ui-input-text,
 ui-input-textarea,
 ui-select {
-  @apply flex flex-col gap-1;
+  @apply flex flex-col gap-1 self-end;
 
   &[tabindex='0'] {
     @apply focus-visible:bg-secondary-200;

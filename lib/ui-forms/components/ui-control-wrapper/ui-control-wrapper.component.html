@@ -1,9 +1,8 @@
 <div
-  *ngIf="useVerticalLabel"
+  *ngIf="useVerticalLabel && label"
   class="label-wrapper"
 >
   <label
-    *ngIf="label"
     class="form-input-label"
     [for]="id + '_input'"
   >
