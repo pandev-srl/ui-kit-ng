@@ -20,9 +20,15 @@ ui-select {
   > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
   > ui-control-wrapper > .select-wrapper {
     > .input-item {
+      @apply focus-visible:outline-0;
+
       > input,
       textarea {
         @apply focus-visible:outline-0;
+      }
+
+      > input[type='email'] {
+        @apply lowercase;
       }
 
       > textarea {
