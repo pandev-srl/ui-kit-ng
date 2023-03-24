@@ -13,6 +13,7 @@ export class UiCalendarComponent {
 
   @Input() initialWeekDay: WeekdayNumbers = 1;
   @Input() events: CalendarEvent[] = [];
+  @Input() loading = false;
 
   @Output() eventClicked = new EventEmitter<CalendarEvent>();
 }

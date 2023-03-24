@@ -9,6 +9,7 @@ import { UiIconModule } from '../ui-icon';
 import { UiCalendarActionsComponent } from './components/ui-calendar-actions/ui-calendar-actions.component';
 import { UiHeadingModule } from '../ui-heading';
 import { UiCalendarDesktopMonthlyViewToolbarComponent } from './components/ui-calendar-desktop-monthly-view-toolbar/ui-calendar-desktop-monthly-view-toolbar.component';
+import { UiLoadingModule } from '../ui-loading';
 
 const exported = [
   UiCalendarComponent,
@@ -20,7 +21,7 @@ const exported = [
 
 @NgModule({
   declarations: [...exported, UiCalendarActionsComponent],
-  imports: [CommonModule, UiButtonModule, UiIconModule, UiHeadingModule],
+  imports: [CommonModule, UiButtonModule, UiIconModule, UiHeadingModule, UiLoadingModule],
   exports: [...exported],
 })
 export class UiCalendarModule {}

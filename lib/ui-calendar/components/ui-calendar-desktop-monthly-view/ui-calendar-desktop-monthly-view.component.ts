@@ -24,6 +24,8 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
   @Input() initialWeekDay: WeekdayNumbers = 1;
   @Input() events: CalendarEvent[] = [];
 
+  @Input() loading = false;
+
   @Output() eventClicked = new EventEmitter<CalendarEvent>();
 
   constructor(private cdr: ChangeDetectorRef) {}

@@ -1,5 +1,6 @@
 <ui-calendar-desktop-monthly-view
   *ngIf="isDesktop$ | async"
+  [loading]="loading"
   [refDate]="refDate"
   (refDateChange)="refDateChange.emit($event)"
   [events]="events"
@@ -8,6 +9,7 @@
 ></ui-calendar-desktop-monthly-view>
 <ui-calendar-mobile-monthly-view
   *ngIf="isMobile$ | async"
+  [loading]="loading"
   [refDate]="refDate"
   (refDateChange)="refDateChange.emit($event)"
   [events]="events"

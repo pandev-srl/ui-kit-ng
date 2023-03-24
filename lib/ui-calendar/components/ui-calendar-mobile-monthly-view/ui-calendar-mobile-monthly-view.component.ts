@@ -14,5 +14,7 @@ export class UiCalendarMobileMonthlyViewComponent {
   @Input() initialWeekDay: WeekdayNumbers = 1;
   @Input() events: CalendarEvent[] = [];
 
+  @Input() loading = false;
+
   @Output() eventClicked = new EventEmitter<CalendarEvent>();
 }
