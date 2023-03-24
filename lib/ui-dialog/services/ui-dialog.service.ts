@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import {
   ApplicationRef,
   ComponentFactoryResolver,
+  ComponentRef,
   Inject,
   Injectable,
   Injector,
@@ -23,7 +24,11 @@ export class UiDialogService {
     private renderFactory: RendererFactory2,
   ) {}
 
-  open<T>(content: Type<T>, initialize: ((instance: T) => void) | null, options: UiDialogOptions): UiDialogRef<T> {
+  open<T>(
+    content: Type<T>,
+    initialize: ((instance: T, contentRef: ComponentRef<T>) => void) | null,
+    options: UiDialogOptions,
+  ): UiDialogRef<T> {
     const renderer = this.renderFactory.createRenderer(null, null);
 
     const cfw = this.cfr.resolveComponentFactory(UiDialogComponent);
@@ -71,7 +76,7 @@ export class UiDialogService {
       uiDialogRef.contentRef = cnt;
 
       if (initialize) {
-        initialize(cnt.instance);
+        initialize(cnt.instance, uiDialogRef.contentRef);
       }
 
       cnt.changeDetectorRef.detectChanges();
