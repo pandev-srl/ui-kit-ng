@@ -22,27 +22,24 @@ const exportedComponents = [UiDialogComponent];
       provide: UI_DIALOG_ALERT_DEFAULT_ICONS,
       useValue: {
         primary: {
-          iconSet: 'fa-solid',
           iconName: 'fa-circle-info',
         },
         secondary: {
-          iconSet: 'fa-solid',
+          iconName: 'fa-circle-info',
+        },
+        accent: {
           iconName: 'fa-circle-info',
         },
         danger: {
-          iconSet: 'fa-solid',
           iconName: 'fa-circle-exclamation',
         },
         success: {
-          iconSet: 'fa-solid',
           iconName: 'fa-circle-check',
         },
         warning: {
-          iconSet: 'fa-solid',
           iconName: 'fa-triangle-exclamation',
         },
         info: {
-          iconSet: 'fa-solid',
           iconName: 'fa-circle-info',
         },
       },

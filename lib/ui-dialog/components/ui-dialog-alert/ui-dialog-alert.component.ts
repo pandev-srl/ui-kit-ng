@@ -7,10 +7,8 @@ import {
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges,
 } from '@angular/core';
 import { UiTheme } from '../../../models';
-import { UI_DIALOG_ALERT_DEFAULT_ICONS } from '../../models/public-api';
 
 @Component({
   selector: 'ui-dialog-alert',
