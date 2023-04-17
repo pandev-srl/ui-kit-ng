@@ -1,0 +1,54 @@
+ui-panel {
+  @apply flex flex-col;
+  @apply relative;
+
+  @apply bg-secondary-100;
+  @apply dark:bg-secondary-700;
+
+  &.shadowed {
+    @apply dark:shadow-none;
+  }
+
+  &.is-loading {
+    @apply overflow-hidden;
+    @apply dark:shadow-none;
+  }
+
+  &.is-transparent {
+    @apply bg-transparent;
+  }
+
+  ui-panel-header {
+    @apply block;
+    @apply py-3;
+    @apply px-3;
+    @apply border-b;
+    @apply border-secondary-200;
+    @apply dark:border-secondary-500;
+  }
+
+  ui-panel-body {
+    @apply block;
+    @apply grow;
+
+    &.without-header {
+    }
+
+    &.without-footer {
+    }
+
+    &.is-padded {
+      @apply py-3;
+      @apply px-3;
+    }
+  }
+
+  ui-panel-footer {
+    @apply py-3;
+    @apply px-3;
+    @apply block;
+    @apply border-t;
+    @apply border-secondary-200;
+    @apply dark:border-secondary-500;
+  }
+}

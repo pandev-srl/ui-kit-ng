@@ -1,0 +1,36 @@
+ui-dropdown {
+  ui-dropdown-menu {
+    @apply mt-1.5;
+    @apply bg-secondary-100;
+    @apply border border-secondary-300;
+
+    @apply dark:bg-secondary-500;
+    @apply block;
+    @apply absolute;
+
+    @apply w-max;
+    @apply max-w-[240px];
+
+    @apply py-4;
+    @apply px-2.5;
+
+    ui-dropdown-item {
+      @apply cursor-pointer;
+      @apply text-left;
+      @apply block;
+      @apply py-2.5;
+      @apply px-2;
+
+      @apply transition-all;
+      @apply hover:bg-secondary-100;
+      @apply dark:hover:bg-secondary-800;
+
+      @apply flex flex-wrap items-center align-middle;
+
+      &.active {
+        @apply bg-secondary-100;
+        @apply dark:bg-secondary-800;
+      }
+    }
+  }
+}

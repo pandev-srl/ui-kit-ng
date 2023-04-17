@@ -1,0 +1,41 @@
+ui-heading {
+  @apply block;
+
+  &.h1,
+  &.h2,
+  &.h3,
+  &.h4,
+  &.h5,
+  &.h6 {
+  }
+
+  &.h1 {
+    @apply text-3xl;
+    @apply lg:text-4xl;
+  }
+
+  &.h2 {
+    @apply text-2xl;
+    @apply lg:text-3xl;
+  }
+
+  &.h3 {
+    @apply text-xl;
+    @apply lg:text-2xl;
+  }
+
+  &.h4 {
+    @apply text-lg;
+    @apply lg:text-xl;
+  }
+
+  &.h5 {
+    @apply text-base;
+    @apply lg:text-lg;
+  }
+
+  &.h6 {
+    @apply text-sm;
+    @apply lg:text-base;
+  }
+}

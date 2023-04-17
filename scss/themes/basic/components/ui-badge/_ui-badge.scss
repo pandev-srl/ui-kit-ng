@@ -1,0 +1,135 @@
+ui-badge {
+  @apply items-center;
+  @apply px-2;
+  @apply py-0.5;
+  @apply font-medium;
+
+  @apply text-black;
+
+  > .pulse-container {
+    @apply mr-1;
+    @apply relative flex h-3 w-3;
+
+    > .pulse-animation {
+      @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75;
+    }
+
+    > .pulse-circle {
+      @apply relative inline-flex rounded-full h-3 w-3;
+    }
+  }
+
+  > .loading-icon-container {
+    @apply mr-1;
+
+    > .loading-icon {
+      @apply fa-spin;
+      //@apply fa-spin relative inline-flex h-full w-full;
+    }
+  }
+
+  &.badge-primary {
+    @apply bg-primary-100;
+    @apply dark:bg-primary-100;
+
+    .pulse-animation {
+      @apply bg-primary-400;
+      @apply dark:bg-primary-800;
+    }
+
+    .pulse-circle {
+      @apply bg-primary-500;
+      @apply dark:bg-primary-500;
+    }
+  }
+
+  &.badge-secondary {
+    @apply bg-secondary-100;
+    @apply dark:bg-secondary-100;
+
+    .pulse-animation {
+      @apply bg-secondary-400;
+      @apply dark:bg-secondary-800;
+    }
+
+    .pulse-circle {
+      @apply bg-secondary-500;
+      @apply dark:bg-secondary-500;
+    }
+  }
+
+  &.badge-accent {
+    @apply bg-secondary-100;
+    @apply dark:bg-secondary-100;
+
+    .pulse-animation {
+      @apply bg-secondary-400;
+      @apply dark:bg-secondary-800;
+    }
+
+    .pulse-circle {
+      @apply bg-secondary-500;
+      @apply dark:bg-secondary-500;
+    }
+  }
+
+  &.badge-success {
+    @apply bg-success-100;
+    @apply dark:bg-success-100;
+
+    .pulse-animation {
+      @apply bg-success-400;
+      @apply dark:bg-success-800;
+    }
+
+    .pulse-circle {
+      @apply bg-success-500;
+      @apply dark:bg-success-500;
+    }
+  }
+
+  &.badge-info {
+    @apply bg-info-100;
+    @apply dark:bg-info-100;
+
+    .pulse-animation {
+      @apply bg-info-400;
+      @apply dark:bg-info-800;
+    }
+
+    .pulse-circle {
+      @apply bg-info-500;
+      @apply dark:bg-info-500;
+    }
+  }
+
+  &.badge-warning {
+    @apply bg-warning-100;
+    @apply dark:bg-warning-100;
+
+    .pulse-animation {
+      @apply bg-warning-400;
+      @apply dark:bg-warning-800;
+    }
+
+    .pulse-circle {
+      @apply bg-warning-500;
+      @apply dark:bg-warning-500;
+    }
+  }
+
+  &.badge-danger {
+    @apply bg-danger-100;
+    @apply dark:bg-danger-100;
+
+    .pulse-animation {
+      @apply bg-danger-400;
+      @apply dark:bg-danger-800;
+    }
+
+    .pulse-circle {
+      @apply bg-danger-500;
+      @apply dark:bg-danger-500;
+    }
+  }
+}

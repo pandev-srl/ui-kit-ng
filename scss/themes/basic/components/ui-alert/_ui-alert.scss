@@ -1,0 +1,131 @@
+ui-alert {
+  @apply gap-2;
+
+  @apply p-4;
+
+  &.alert-primary {
+    @apply bg-primary-200;
+    @apply text-primary-900;
+
+    @apply dark:bg-primary-100;
+    @apply dark:text-primary-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-secondary {
+    @apply bg-secondary-200;
+    @apply text-secondary-900;
+
+    @apply dark:bg-secondary-100;
+    @apply dark:text-secondary-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-accent {
+    @apply bg-accent-200;
+    @apply text-accent-900;
+
+    @apply dark:bg-accent-100;
+    @apply dark:text-accent-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-success {
+    @apply bg-success-200;
+    @apply text-success-900;
+
+    @apply dark:bg-success-100;
+    @apply dark:text-success-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-danger {
+    @apply bg-danger-100;
+    @apply text-danger-900;
+
+    @apply dark:bg-danger-100;
+    @apply dark:text-danger-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-warning {
+    @apply bg-warning-200;
+    @apply text-warning-900;
+
+    @apply dark:bg-warning-100;
+    @apply dark:text-warning-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  &.alert-info {
+    @apply bg-info-200;
+    @apply text-info-900;
+
+    @apply dark:bg-info-100;
+    @apply dark:text-info-800;
+
+    .alert-body {
+      h3 {
+        @apply font-semibold;
+        @apply antialiased;
+      }
+    }
+  }
+
+  > .alert-icon {
+    @apply flex-shrink-0 align-middle content-center flex-wrap flex;
+
+    > i {
+      @extend .fa-2x;
+      @extend .fa-fw;
+    }
+  }
+
+  > .alert-content {
+    @apply align-middle content-center flex-wrap flex gap-1;
+
+    > .alert-title {
+      @apply font-bold w-full;
+    }
+
+    > .alert-description {
+      @apply w-full;
+    }
+  }
+}

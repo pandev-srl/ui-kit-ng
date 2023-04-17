@@ -1,0 +1,122 @@
+ui-drawer-content {
+  @apply block;
+  @apply md:pl-[250px];
+}
+
+ui-drawer-sidebar {
+  @apply flex;
+  @apply flex-col;
+
+  @apply fixed;
+  @apply w-[250px];
+  @apply h-screen;
+  @apply bg-secondary-100;
+  @apply dark:bg-secondary-800;
+
+  @apply z-50;
+
+  &:not(.opened) {
+    @apply ml-[-250px] md:ml-0;
+  }
+
+  ui-drawer-sidebar-content {
+    @apply block;
+    @apply px-2 py-0.5;
+
+    @apply flex-grow;
+    @apply max-h-screen;
+
+    @apply overflow-y-scroll;
+  }
+
+  ui-drawer-sidebar-header {
+    @apply min-h-[3.5rem];
+  }
+
+  [ui-drawer-sidebar-item] {
+    @apply flex;
+    @apply items-center;
+
+    @apply px-3 py-3.5;
+
+    @apply cursor-pointer;
+
+    @apply hover:bg-white;
+    @apply hover:dark:bg-secondary-700;
+
+    @apply text-secondary-700;
+    @apply dark:text-secondary-300;
+
+    @apply hover:text-black;
+    @apply dark:hover:text-white;
+
+    @apply active:outline;
+    @apply active:outline-1;
+    //@apply active:dark:bg-primary-500;
+    @apply active:outline-primary-200;
+
+    @apply focus-visible:outline-0;
+
+    &.active {
+      @apply font-semibold;
+      @apply dark:font-normal;
+
+      @apply bg-primary-200;
+      @apply text-secondary-900;
+
+      @apply dark:bg-primary-200;
+      @apply dark:text-secondary-900;
+    }
+  }
+}
+
+ui-drawer-top-navbar {
+  @apply flex;
+  @apply items-center;
+  @apply fixed;
+  @apply top-0;
+
+  @apply h-14;
+  @apply w-full;
+
+  @apply bg-white;
+  @apply dark:bg-secondary-900;
+
+  @apply z-40;
+
+  @apply px-4;
+
+  [ui-drawer-top-navbar-link] {
+    @apply inline-block;
+    @apply items-center;
+
+    @apply py-2;
+    @apply px-3;
+
+    @apply cursor-pointer;
+
+    @apply hover:bg-white;
+    @apply hover:dark:bg-secondary-700;
+
+    @apply text-secondary-700;
+    @apply dark:text-secondary-300;
+
+    @apply hover:text-black;
+    @apply dark:hover:text-white;
+
+    @apply active:outline;
+    @apply active:outline-1;
+    @apply active:outline-primary-200;
+
+    &.active {
+      @apply dark:bg-primary-200;
+      @apply dark:text-secondary-900;
+
+      @apply bg-primary-200;
+      @apply text-secondary-900;
+
+      @apply font-semibold;
+      @apply dark:font-normal;
+    }
+  }
+}

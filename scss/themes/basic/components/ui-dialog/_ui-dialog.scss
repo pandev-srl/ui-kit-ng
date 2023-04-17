@@ -1,0 +1,112 @@
+ui-dialog {
+  @apply z-[1000];
+
+  > .dialog-overlay {
+    @apply fixed inset-0 overflow-y-auto;
+
+    > .dialog-backdrop {
+      @apply inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+    }
+
+    > .dialog-content {
+      @apply flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0;
+    }
+  }
+}
+
+ui-dialog-alert {
+  @apply flex flex-col;
+
+  > ui-panel {
+    > ui-panel-body {
+      @apply gap-3 flex flex-col;
+
+      > .icon-container {
+        @apply mx-auto flex h-12 w-12 items-center justify-center rounded-full;
+
+        @each $t in $themes {
+          &.#{$t} {
+            //@apply bg-#{$t}-300;
+            @apply text-#{$t}-400;
+
+            //@apply dark:bg-#{$t}-100;
+            @apply dark:text-#{$t}-500;
+          }
+        }
+      }
+
+      > .body-container {
+        @apply text-center;
+
+        > .title {
+          @apply text-lg font-medium leading-6;
+        }
+
+        > .text {
+          @apply mt-2;
+
+          > p {
+            @apply text-sm;
+          }
+        }
+      }
+
+      > .footer-container {
+      }
+    }
+  }
+}
+
+ui-dialog-confirm {
+  @apply flex flex-col;
+
+  > ui-panel {
+    > ui-panel-body {
+      @apply gap-3 flex flex-col;
+
+      > .icon-container {
+        @apply mx-auto flex h-12 w-12 items-center justify-center rounded-full;
+
+        @each $t in $themes {
+          &.#{$t} {
+            //@apply bg-#{$t}-300;
+            @apply text-#{$t}-400;
+
+            //@apply dark:bg-#{$t}-100;
+            @apply dark:text-#{$t}-500;
+          }
+        }
+      }
+
+      > .body-container {
+        @apply text-center;
+
+        > .title {
+          @apply text-lg font-medium leading-6;
+        }
+
+        > .text {
+          @apply mt-2;
+
+          > p {
+            @apply text-sm;
+          }
+        }
+      }
+
+      > .footer-container {
+        @apply flex flex-col gap-3;
+
+        > .ok-button {
+          @apply w-full;
+        }
+
+        > .cancel-button {
+          > button {
+            @apply w-full;
+          }
+        }
+      }
+    }
+  }
+}
