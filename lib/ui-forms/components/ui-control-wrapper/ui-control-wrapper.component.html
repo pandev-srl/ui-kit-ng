@@ -11,7 +11,7 @@
 </div>
 <ng-content></ng-content>
 <div
-  *ngIf="isDirtyOrTouched && printErrors.length > 0"
+  *ngIf="(isDirtyOrTouched && printErrors.length > 0) || hint"
   class="messages-container"
 >
   <div
