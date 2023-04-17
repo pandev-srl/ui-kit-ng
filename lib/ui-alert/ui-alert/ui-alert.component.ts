@@ -1,12 +1,12 @@
 import {
-  Component,
-  OnInit,
   ChangeDetectionStrategy,
-  Input,
-  ViewChild,
-  OnChanges,
-  SimpleChanges,
+  Component,
   HostBinding,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
 } from '@angular/core';
 import { UiTheme } from '../../models';
 
@@ -26,6 +26,7 @@ export class UiAlertComponent implements OnInit, OnChanges {
 
   @HostBinding('class.alert-primary') alertPrimary = false;
   @HostBinding('class.alert-secondary') alertSecondary = false;
+  @HostBinding('class.alert-accent') alertAccent = false;
   @HostBinding('class.alert-danger') alertDanger = false;
   @HostBinding('class.alert-success') alertSuccess = false;
   @HostBinding('class.alert-warning') alertWarning = false;
@@ -34,6 +35,7 @@ export class UiAlertComponent implements OnInit, OnChanges {
   readonly ICON_MAPS: { [key in UiTheme]: string | null } = {
     primary: null,
     secondary: null,
+    accent: null,
     danger: 'fa-times-circle',
     success: 'fa-check-circle',
     warning: 'fa-exclamation-circle',
@@ -59,6 +61,7 @@ export class UiAlertComponent implements OnInit, OnChanges {
   private setTheme(): void {
     this.alertPrimary = false;
     this.alertSecondary = false;
+    this.alertAccent = false;
     this.alertDanger = false;
     this.alertSuccess = false;
     this.alertWarning = false;
@@ -70,6 +73,9 @@ export class UiAlertComponent implements OnInit, OnChanges {
         break;
       case 'secondary':
         this.alertSecondary = true;
+        break;
+      case 'accent':
+        this.alertAccent = true;
         break;
       case 'danger':
         this.alertDanger = true;

@@ -41,6 +41,7 @@ export class UiButtonComponent implements OnInit, OnChanges {
 
   @HostBinding('class.btn-primary') btnPrimary = false;
   @HostBinding('class.btn-secondary') btnSecondary = false;
+  @HostBinding('class.btn-accent') btnAccent = false;
   @HostBinding('class.btn-danger') btnDanger = false;
   @HostBinding('class.btn-success') btnSuccess = false;
   @HostBinding('class.btn-warning') btnWarning = false;
@@ -90,6 +91,7 @@ export class UiButtonComponent implements OnInit, OnChanges {
   private setTheme(): void {
     this.btnPrimary = false;
     this.btnSecondary = false;
+    this.btnAccent = false;
     this.btnDanger = false;
     this.btnSuccess = false;
     this.btnWarning = false;
@@ -100,6 +102,9 @@ export class UiButtonComponent implements OnInit, OnChanges {
         this.btnPrimary = true;
         break;
       case 'secondary':
+        this.btnSecondary = true;
+        break;
+      case 'accent':
         this.btnSecondary = true;
         break;
       case 'danger':
