@@ -3,25 +3,41 @@ ui-badge {
   @apply px-2;
   @apply py-0.5;
   @apply rounded;
-  @apply text-xs;
   @apply font-medium;
 
   @apply text-black;
 
-  //@apply border-0.5;
-  //@apply border-secondary-100;
-  //@apply dark:border-secondary-800;
+  > .pulse-container {
+    @apply mr-1;
+    @apply relative flex h-3 w-3;
+
+    > .pulse-animation {
+      @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75;
+    }
+
+    > .pulse-circle {
+      @apply relative inline-flex rounded-full h-3 w-3;
+    }
+  }
+
+  > .loading-icon-container {
+    @apply mr-1;
+
+    > .loading-icon {
+      @apply fa-spin;
+    }
+  }
 
   &.badge-primary {
     @apply bg-primary-100;
     @apply dark:bg-primary-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-primary-400;
       @apply dark:bg-primary-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-primary-500;
       @apply dark:bg-primary-500;
     }
@@ -31,12 +47,12 @@ ui-badge {
     @apply bg-secondary-100;
     @apply dark:bg-secondary-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-secondary-400;
       @apply dark:bg-secondary-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-secondary-500;
       @apply dark:bg-secondary-500;
     }
@@ -46,12 +62,12 @@ ui-badge {
     @apply bg-success-100;
     @apply dark:bg-success-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-success-400;
       @apply dark:bg-success-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-success-500;
       @apply dark:bg-success-500;
     }
@@ -61,12 +77,12 @@ ui-badge {
     @apply bg-info-100;
     @apply dark:bg-info-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-info-400;
       @apply dark:bg-info-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-info-500;
       @apply dark:bg-info-500;
     }
@@ -76,12 +92,12 @@ ui-badge {
     @apply bg-warning-100;
     @apply dark:bg-warning-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-warning-400;
       @apply dark:bg-warning-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-warning-500;
       @apply dark:bg-warning-500;
     }
@@ -91,12 +107,12 @@ ui-badge {
     @apply bg-danger-100;
     @apply dark:bg-danger-100;
 
-    .badge-animation {
+    .pulse-animation {
       @apply bg-danger-400;
       @apply dark:bg-danger-800;
     }
 
-    .badge-status {
+    .pulse-circle {
       @apply bg-danger-500;
       @apply dark:bg-danger-500;
     }

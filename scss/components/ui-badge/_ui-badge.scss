@@ -2,50 +2,50 @@ ui-badge {
   @apply inline-flex;
 
   &.badge-primary {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 
   &.badge-secondary {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 
   &.badge-success {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 
   &.badge-info {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 
   &.badge-warning {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 
   &.badge-danger {
-    .badge-animation {
+    .pulse-animation {
     }
 
-    .badge-status {
+    .pulse-circle {
     }
   }
 }

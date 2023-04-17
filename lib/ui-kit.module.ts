@@ -13,12 +13,14 @@ import { UiFormsModule } from './ui-forms';
 import { UiDialogModule } from './ui-dialog';
 import { UiActionMessagesComponent } from './ui-action-messages';
 import { UiBadgeModule } from './ui-badge';
+import { UiCalendarModule } from './ui-calendar';
 
 export const exportedModules = [
   UiActionMessagesComponent,
   UiAlertModule,
   UiBadgeModule,
   UiButtonModule,
+  UiCalendarModule,
   UiClickOutsideModule,
   UiDialogModule,
   UiDropdownModule,

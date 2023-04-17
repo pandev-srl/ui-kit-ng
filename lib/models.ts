@@ -1,1 +1,1 @@
-export type UiTheme = 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info';
+export type UiTheme = 'primary' | 'secondary' | 'accent' | 'danger' | 'success' | 'warning' | 'info';

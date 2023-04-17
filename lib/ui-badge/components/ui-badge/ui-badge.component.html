@@ -1,0 +1,17 @@
+<div
+  *ngIf="pulse && !loading"
+  class="pulse-container"
+>
+  <div class="pulse-animation"></div>
+  <div class="pulse-circle"></div>
+</div>
+<div
+  *ngIf="loading"
+  class="loading-icon-container"
+>
+  <i
+    [uiIcon]="defaultLoadingIcon"
+    class="loading-icon"
+  ></i>
+</div>
+{{ title }}
