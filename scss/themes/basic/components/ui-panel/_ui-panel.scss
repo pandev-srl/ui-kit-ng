@@ -20,11 +20,14 @@ ui-panel {
 
   ui-panel-header {
     @apply block;
-    @apply py-3;
-    @apply px-3;
     @apply border-b;
     @apply border-secondary-200;
     @apply dark:border-secondary-500;
+
+    &.is-padded {
+      @apply py-3;
+      @apply px-3;
+    }
   }
 
   ui-panel-body {
@@ -44,11 +47,14 @@ ui-panel {
   }
 
   ui-panel-footer {
-    @apply py-3;
-    @apply px-3;
     @apply block;
     @apply border-t;
     @apply border-secondary-200;
     @apply dark:border-secondary-500;
+
+    &.is-padded {
+      @apply py-3;
+      @apply px-3;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ui-panel-footer',
@@ -6,6 +6,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiPanelFooterComponent implements OnInit {
+  @Input()
+  @HostBinding('class.is-padded')
+  padded = true;
+
   constructor() {}
 
   ngOnInit(): void {}
