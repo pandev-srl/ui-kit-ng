@@ -11,3 +11,12 @@ $ui-mobile-header-margin: 0rem !default;
 // Mobile navbar
 $ui-mobile-navbar-height: 4.375rem !default;
 $ui-mobile-navbar-margin: 0rem !default;
+
+:root {
+  --ui-mobile-navbar-container-height: calc(
+    env(safe-area-inset-bottom) + #{$ui-mobile-navbar-height + 2 * $ui-mobile-navbar-margin}
+  );
+  --ui-mobile-header-container-height: calc(
+    env(safe-area-inset-top) + #{$ui-mobile-header-height + 2 * $ui-mobile-header-margin}
+  );
+}

@@ -1,5 +1,5 @@
 ui-mobile-header-container {
-  height: calc(env(safe-area-inset-top) + $ui-mobile-header-height + 2 * $ui-mobile-header-margin);
+  height: var(--ui-mobile-header-container-height);
 
   @apply z-1000;
 }
