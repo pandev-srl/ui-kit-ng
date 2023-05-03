@@ -19,4 +19,7 @@ $ui-mobile-navbar-margin: 0rem !default;
   --ui-mobile-header-container-height: calc(
     env(safe-area-inset-top) + #{$ui-mobile-header-height + 2 * $ui-mobile-header-margin}
   );
+  --ui-desktop-header-container-height: calc(
+    env(safe-area-inset-top) + #{$ui-desktop-header-height + 2 * $ui-desktop-header-margin}
+  );
 }
