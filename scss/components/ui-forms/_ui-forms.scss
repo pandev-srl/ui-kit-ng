@@ -7,7 +7,7 @@ ui-select {
   @apply block;
 
   &[tabindex='0'] {
-    @apply focus-visible:outline-0;
+    @apply focus-visible:outline-0 focus-visible:outline-none;
   }
 
   > ui-input-wrapper > ui-control-wrapper > .label-wrapper,
@@ -20,11 +20,11 @@ ui-select {
   > ui-input-wrapper > ui-control-wrapper > .input-wrapper,
   > ui-control-wrapper > .select-wrapper {
     > .input-item {
-      @apply focus-visible:outline-0;
+      @apply focus-visible:outline-0 focus-visible:outline-none;
 
       > input,
       textarea {
-        @apply focus-visible:outline-0;
+        @apply focus-visible:outline-0 focus-visible:outline-none;
       }
 
       > input[type='email'] {
