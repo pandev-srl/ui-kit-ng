@@ -6,13 +6,15 @@ import { UI_DEFAULT_ICON_SET } from '../models';
 })
 export class UiIconDirective implements OnChanges {
   @Input() uiIcon = '';
-  @Input() iconSet = this.defaultIconSet;
+  @Input() iconSet: string | null = this.defaultIconSet;
+  currentIconSet: string = '';
 
   @HostBinding('class') classes = '';
 
   constructor(@Inject(UI_DEFAULT_ICON_SET) private defaultIconSet: string) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.classes = `${this.iconSet} ${this.uiIcon}`;
+    this.currentIconSet = this.iconSet ?? this.defaultIconSet;
+    this.classes = `${this.currentIconSet} ${this.uiIcon}`;
   }
 }
