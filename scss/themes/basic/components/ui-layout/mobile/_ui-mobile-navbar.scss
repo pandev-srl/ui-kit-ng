@@ -9,10 +9,10 @@ ui-mobile-navbar {
   @apply bg-secondary-100;
   @apply dark:bg-secondary-700;
 
-  margin-top: $ui-mobile-navbar-margin;
-  margin-right: calc(env(safe-area-inset-right) + $ui-mobile-navbar-margin);
-  margin-bottom: calc(env(safe-area-inset-bottom) + $ui-mobile-navbar-margin);
-  margin-left: calc(env(safe-area-inset-left) + $ui-mobile-navbar-margin);
+  padding-top: calc(env(safe-area-inset-top) + $ui-mobile-navbar-margin);
+  padding-right: calc(env(safe-area-inset-right) + $ui-mobile-navbar-margin);
+  padding-bottom: calc(env(safe-area-inset-bottom) + $ui-mobile-navbar-margin);
+  padding-left: calc(env(safe-area-inset-left) + $ui-mobile-navbar-margin);
 
   [ui-mobile-navbar-link] {
     @apply p-2;

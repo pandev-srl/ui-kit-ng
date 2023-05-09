@@ -4,6 +4,7 @@ ui-desktop-header-container {
   @apply justify-center;
   @apply z-1000;
   @apply bg-white;
+  @apply dark:bg-secondary-900;
 }
 
 ui-desktop-header {
@@ -20,7 +21,7 @@ ui-desktop-header {
 
   margin-top: calc(env(safe-area-inset-top) + $ui-desktop-header-margin);
   margin-right: calc(env(safe-area-inset-right) + $ui-desktop-header-margin);
-  margin-bottom: $ui-desktop-header-margin;
+  margin-bottom: calc(env(safe-area-inset-bottom) + $ui-desktop-header-margin);
   margin-left: calc(env(safe-area-inset-left) + $ui-desktop-header-margin);
 
   @apply gap-x-2;
