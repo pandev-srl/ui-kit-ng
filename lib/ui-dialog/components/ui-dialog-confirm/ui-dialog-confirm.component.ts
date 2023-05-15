@@ -12,6 +12,8 @@ export class UiDialogConfirmComponent implements OnInit {
   @Input() showIcon = true;
   @Input() title: string | null = null;
   @Input() text: string | null = null;
+  @Input() loading = false;
+  @Input() loadingText: string | null = null;
 
   @Output() confirm = new EventEmitter<void>();
   @Output() cancel = new EventEmitter<void>();

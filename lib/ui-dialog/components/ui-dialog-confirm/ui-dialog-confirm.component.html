@@ -1,4 +1,7 @@
-<ui-panel>
+<ui-panel
+  [loading]="loading"
+  [loadingTitle]="loadingText"
+>
   <ui-panel-body>
     <div
       *ngIf="showIcon"
