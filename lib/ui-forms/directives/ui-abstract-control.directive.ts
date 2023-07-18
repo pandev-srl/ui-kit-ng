@@ -132,7 +132,7 @@ export class UiAbstractControlDirective<T> implements AfterViewInit, OnDestroy, 
     this.onTouch = fn;
   }
 
-  setDisabledState(isDisabled: boolean): void {}
+  setDisabledState(_isDisabled: boolean): void {}
 
   writeValue(obj: any): void {
     this.value = obj;

@@ -52,7 +52,7 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
     }
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(_changes: SimpleChanges): void {
     this.initDaysOfMonth();
     this.initWeekDays();
     this.initEvents();

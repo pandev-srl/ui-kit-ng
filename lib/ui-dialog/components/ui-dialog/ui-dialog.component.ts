@@ -48,7 +48,7 @@ export class UiDialogComponent implements AfterViewInit {
   @ViewChild('vcr', { read: ViewContainerRef })
   public vcr: ViewContainerRef | null = null;
 
-  closeOnBackdropClick(el: MouseEvent): void {
+  closeOnBackdropClick(_el: MouseEvent): void {
     if (this.dialogRef.options?.closeOnBackdropClick) {
       this.dialogRef.hide();
     }

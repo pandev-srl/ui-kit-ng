@@ -52,7 +52,7 @@ export class UiDropdownMenuComponent implements OnInit, OnChanges, OnDestroy, Af
     if (this.items) {
       this.items.forEach((item) => {
         this.subs.push(
-          item.clicked.subscribe((el) => {
+          item.clicked.subscribe(() => {
             if (this.closeOnClick) {
               this.closedByItems.emit();
             }

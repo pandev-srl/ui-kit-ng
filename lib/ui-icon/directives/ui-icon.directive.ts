@@ -13,7 +13,7 @@ export class UiIconDirective implements OnChanges {
 
   constructor(@Inject(UI_DEFAULT_ICON_SET) private defaultIconSet: string) {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(_changes: SimpleChanges): void {
     this.currentIconSet = this.iconSet ?? this.defaultIconSet;
     this.classes = `${this.currentIconSet} ${this.uiIcon}`;
   }

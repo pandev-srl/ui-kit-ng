@@ -4,7 +4,6 @@ import {
   ElementRef,
   EventEmitter,
   HostListener,
-  Input,
   OnInit,
   Output,
 } from '@angular/core';

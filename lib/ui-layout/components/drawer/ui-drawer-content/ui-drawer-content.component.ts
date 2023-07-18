@@ -1,4 +1,4 @@
-import { AfterContentInit, ChangeDetectionStrategy, Component, ContentChild, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, OnInit } from '@angular/core';
 import { UiDrawerTopNavbarComponent } from '../ui-drawer-top-navbar/ui-drawer-top-navbar.component';
 
 @Component({

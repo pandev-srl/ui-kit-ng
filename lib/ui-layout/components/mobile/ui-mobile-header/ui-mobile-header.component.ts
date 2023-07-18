@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ContentChild, OnInit, TemplateRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, OnInit } from '@angular/core';
 import { UiMobileHeaderLeftContentDirective } from '../../../directives/mobile/ui-mobile-header-left-content.directive';
 import { UiMobileHeaderCenterContentDirective } from '../../../directives/mobile/ui-mobile-header-center-content.directive';
 import { UiMobileHeaderRightContentDirective } from '../../../directives/mobile/ui-mobile-header-right-content.directive';
