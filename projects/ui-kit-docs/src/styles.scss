@@ -1,0 +1,12 @@
+@config '../tailwind.config.js';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '@pandev-srl/ui-kit-ng/scss/ui-kit';
+@import '@pandev-srl/ui-kit-ng/scss/themes/basic';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

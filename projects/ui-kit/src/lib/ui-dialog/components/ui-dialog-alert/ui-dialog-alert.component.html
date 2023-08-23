@@ -1,0 +1,40 @@
+<ui-panel>
+  <ui-panel-body>
+    <div
+      *ngIf="showIcon"
+      class="icon-container"
+      [ngClass]="theme"
+    >
+      <i
+        [uiIcon]="(icon | uiDialogThemeToIcon: theme).iconName"
+        [iconSet]="(icon | uiDialogThemeToIcon: theme).iconSet"
+        class="fa-3x"
+      ></i>
+    </div>
+    <div class="body-container">
+      <h3
+        *ngIf="title"
+        class="title"
+      >
+        {{ title }}
+      </h3>
+      <div
+        *ngIf="text"
+        class="text"
+      >
+        <p>{{ text }}</p>
+      </div>
+    </div>
+    <div class="footer-container">
+      <button
+        type="button"
+        ui-button
+        class="w-full"
+        [theme]="theme"
+        (click)="ok.emit()"
+      >
+        OK
+      </button>
+    </div>
+  </ui-panel-body>
+</ui-panel>

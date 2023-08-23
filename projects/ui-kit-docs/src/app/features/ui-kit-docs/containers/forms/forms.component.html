@@ -1,0 +1,166 @@
+<ui-heading>Form components</ui-heading>
+
+<hr />
+
+<form
+  [formGroup]="form"
+  class="grid grid-cols-1 lg:grid-cols-3 gap-3"
+>
+  <div>
+    <ui-input-text
+      id="inputText1"
+      formControlName="inputText1"
+      label="Text input 1"
+    ></ui-input-text>
+
+    <ui-input-text
+      id="inputPassword1"
+      type="password"
+      formControlName="inputPassword1"
+      label="Password input 1"
+      autocomplete="new-password"
+    ></ui-input-text>
+
+    <ui-input-text
+      id="inputWithAsyncValidationTrue"
+      formControlName="inputWithAsyncValidationTrue"
+      label="Text input async true"
+      hint="The hint of this form input"
+      (ngModelChange)="onSelectModelChange($event)"
+      (userInput)="onSelectUserInput($event)"
+      (valueChange)="onSelectValueChange($event)"
+    ></ui-input-text>
+
+    <ui-input-text
+      id="inputWithAsyncValidationFalse"
+      formControlName="inputWithAsyncValidationFalse"
+      label="Text input async false"
+      hint="The hint of this form input"
+    ></ui-input-text>
+
+    <ui-input-text
+      id="inputTextDisabledValidations"
+      formControlName="inputTextDisabledValidations"
+      [disableValidationColors]="true"
+      label="Text input async false"
+      hint="The hint of this form input"
+    ></ui-input-text>
+  </div>
+  <div>
+    <ui-input-textarea
+      id="textarea1"
+      formControlName="textarea1"
+      label="Textarea async false"
+      hint="The hint of this form input"
+    ></ui-input-textarea>
+    <ui-input-textarea
+      id="textareaWithAsyncValidationTrue"
+      formControlName="textareaWithAsyncValidationTrue"
+      label="Textarea async true"
+      hint="The hint of this form input"
+    ></ui-input-textarea>
+    <ui-input-textarea
+      id="textareaWithAsyncValidationFalse"
+      formControlName="textareaWithAsyncValidationFalse"
+      label="Textarea async false"
+      hint="The hint of this form input"
+      [rows]="10"
+      [resizable]="true"
+    ></ui-input-textarea>
+    <ui-input-textarea
+      id="textareaTextDisabledValidations"
+      formControlName="textareaTextDisabledValidations"
+      label="Textarea disabled validations"
+      [disableValidationColors]="true"
+    ></ui-input-textarea>
+  </div>
+  <div>
+    <ui-input-number
+      formControlName="inputNumber1"
+      label="Input number"
+      hint="The hint of this form input"
+    ></ui-input-number>
+    <ui-input-number
+      formControlName="inputNumberWithAsyncValidationTrue"
+      label="Input number async true"
+      hint="The hint of this form input"
+    ></ui-input-number>
+    <ui-input-number
+      formControlName="inputNumberWithAsyncValidationFalse"
+      label="Input number async false"
+      hint="The hint of this form input"
+    ></ui-input-number>
+  </div>
+  <div>
+    <ui-field-display
+      id="fieldDisplay1"
+      label="Example of field display"
+      value="Example of value"
+    ></ui-field-display>
+  </div>
+  <div>
+    <ui-checkbox
+      id="boolean1"
+      formControlName="boolean1"
+      hint="The hint of this form input"
+      [indeterminate]="true"
+      label="Example of boolean field with indeterminate"
+    ></ui-checkbox>
+    <ui-checkbox
+      id="boolean2"
+      formControlName="boolean2"
+      [indeterminate]="true"
+      label="Example of boolean field with indeterminate"
+    ></ui-checkbox>
+    <ui-checkbox
+      id="boolean5"
+      formControlName="boolean5"
+      [disableValidationColors]="true"
+      label="Example of boolean disabled validations"
+    ></ui-checkbox>
+  </div>
+
+  <div>
+    <ui-checkbox
+      id="boolean3"
+      formControlName="boolean3"
+      label="Example of boolean field"
+    ></ui-checkbox>
+    <ui-checkbox
+      id="boolean4"
+      formControlName="boolean4"
+      hint="The hint of this form input"
+      label="Example of boolean field"
+    ></ui-checkbox>
+  </div>
+
+  <div>
+    <ui-select
+      id="select1"
+      formControlName="select1"
+      label="This is a select example"
+      [options]="selectOptionsExample"
+      (ngModelChange)="onSelectModelChange($event)"
+      (userInput)="onSelectUserInput($event)"
+      (valueChange)="onSelectValueChange($event)"
+    >
+    </ui-select>
+
+    <ui-select
+      id="select2"
+      formControlName="select2"
+      label="This is a select example"
+      [options]="selectOptionsExample"
+      [clearable]="true"
+    >
+    </ui-select>
+
+    <button
+      ui-button
+      theme="primary"
+      (click)="onChangeOptionSet()"
+    >
+      Change options set
+    </button>
+  </div>
+</form>

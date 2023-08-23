@@ -1,0 +1,25 @@
+<ui-heading>Dialogs</ui-heading>
+
+<hr />
+
+<div class="grid grid-cols-3">
+  <button
+    ui-button
+    [size]="'md'"
+    [buttonStyle]="'solid'"
+    [theme]="'primary'"
+    (click)="onOpenAlertDialog()"
+  >
+    Open alert dialog
+  </button>
+
+  <button
+    ui-button
+    [size]="'md'"
+    [buttonStyle]="'solid'"
+    [theme]="'primary'"
+    (click)="onOpenConfirmDialog()"
+  >
+    Open confirm dialog
+  </button>
+</div>

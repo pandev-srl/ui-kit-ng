@@ -1,0 +1,61 @@
+<ui-drawer-sidebar>
+  <ui-drawer-sidebar-header>
+    <div class="text-center py-2">
+      <ui-heading
+        size="h4"
+        class=""
+      >
+        PANDEV S.R.L.
+      </ui-heading>
+      <span class="text-sm">Pannello operatori</span>
+    </div>
+    <div class="text-center py-2">
+      <p class="text-sm">amministrazione@pandev.it</p>
+      <a class="text-sm">
+        <i uiIcon="fa-right-from-bracket mr-1"></i>
+        <span>Esci</span>
+      </a>
+    </div>
+  </ui-drawer-sidebar-header>
+
+  <ui-drawer-sidebar-content class="space-y-1.5">
+    <a
+      ui-drawer-sidebar-item
+      *ngFor="let item of navLinks"
+      [routerLink]="item.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.root || false }"
+      class="px-2"
+    >
+      <div class="w-8">
+        <i uiIcon="fa-square-kanban fa-lg fa-fw"></i>
+      </div>
+      <span>{{ item.name }}</span>
+    </a>
+  </ui-drawer-sidebar-content>
+</ui-drawer-sidebar>
+
+<ui-drawer-content class="relative">
+  <ui-drawer-top-navbar class="space-x-1">
+    <a
+      ui-drawer-top-navbar-link
+      routerLink="/docs/drawer"
+      routerLinkActive="active"
+    >
+      <span>Drawer layout</span>
+    </a>
+    <a
+      ui-drawer-top-navbar-link
+      routerLink="/docs/app"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <span>Top navbar layout</span>
+    </a>
+    <ng-content select="[navbarContent]"></ng-content>
+  </ui-drawer-top-navbar>
+
+  <div class="max-w-for-page">
+    <router-outlet></router-outlet>
+  </div>
+</ui-drawer-content>

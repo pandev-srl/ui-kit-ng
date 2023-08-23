@@ -1,0 +1,37 @@
+<ui-heading>Dropdowns</ui-heading>
+
+<hr />
+
+<div class="flex justify-between">
+  <ui-dropdown>
+    <div
+      uiDropdownToggle
+      class="p-2 border-black border cursor-pointer"
+    >
+      My Account
+    </div>
+    <ui-dropdown-menu placement="left">
+      <ui-dropdown-item> ui-dropdown-item works! </ui-dropdown-item>
+      <ui-dropdown-item> second link! </ui-dropdown-item>
+      <ui-dropdown-item> Oh! </ui-dropdown-item>
+    </ui-dropdown-menu>
+  </ui-dropdown>
+
+  <ui-dropdown>
+    <div
+      uiDropdownToggle
+      class="p-2 border-black border cursor-pointer"
+    >
+      My Account
+    </div>
+    <ui-dropdown-menu placement="right">
+      <ui-dropdown-item *ngFor="let i of [1, 2, 3, 4]">
+        <i
+          uiIcon="fa-address-card fa-lg"
+          class="pr-2"
+        ></i>
+        <span> ui-dropdown-item works! </span>
+      </ui-dropdown-item>
+    </ui-dropdown-menu>
+  </ui-dropdown>
+</div>

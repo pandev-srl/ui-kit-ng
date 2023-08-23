@@ -1,0 +1,64 @@
+<ui-heading>Panels</ui-heading>
+
+<hr />
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 py-3">
+  <div>
+    <ui-panel class="min-h-[400px]">
+      <ui-panel-header>
+        <ui-heading size="h4">Heading</ui-heading>
+      </ui-panel-header>
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel class="min-h-[400px]">
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+      <ui-panel-footer>Footer</ui-panel-footer>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel class="min-h-[400px]">
+      <ui-panel-header>
+        <ui-heading size="h4">Heading</ui-heading>
+      </ui-panel-header>
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+      <ui-panel-footer>
+        <ui-heading size="h4">Footer</ui-heading>
+      </ui-panel-footer>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel class="min-h-[400px]">
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel
+      [loading]="true"
+      class="min-h-[400px]"
+    >
+      <ui-panel-header>Header</ui-panel-header>
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+      <ui-panel-footer>Footer</ui-panel-footer>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel
+      [loading]="true"
+      class="min-h-[400px]"
+    >
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+      <ui-panel-footer>Footer</ui-panel-footer>
+    </ui-panel>
+  </div>
+  <div>
+    <ui-panel
+      [loading]="true"
+      class="min-h-[400px]"
+    >
+      <ui-panel-header>Header</ui-panel-header>
+      <ui-panel-body>{{ exampleText }}</ui-panel-body>
+    </ui-panel>
+  </div>
+</div>

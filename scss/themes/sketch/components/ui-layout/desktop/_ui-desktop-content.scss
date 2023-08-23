@@ -1,8 +1,0 @@
-ui-desktop-content {
-  padding-top: calc(env(safe-area-inset-top) + $ui-desktop-header-height + 2 * $ui-desktop-header-margin);
-  padding-bottom: calc(env(safe-area-inset-bottom));
-
-  &.centered {
-    @apply max-w-for-page;
-  }
-}

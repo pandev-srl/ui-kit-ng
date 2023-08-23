@@ -1,0 +1,54 @@
+<ui-mobile-header-container>
+  <ui-mobile-header>
+    <ng-template uiMobileHeaderLeftContent>
+      <p>Left</p>
+    </ng-template>
+    <ng-template uiMobileHeaderCenterContent>
+      <p>Center</p>
+    </ng-template>
+    <ng-template uiMobileHeaderRightContent>
+      <p>Right</p>
+    </ng-template>
+  </ui-mobile-header>
+</ui-mobile-header-container>
+<ui-mobile-content>
+  <ui-docs-simple-nav-links></ui-docs-simple-nav-links>
+
+  <router-outlet></router-outlet>
+</ui-mobile-content>
+<ui-mobile-navbar-container>
+  <ui-mobile-navbar>
+    <a
+      ui-mobile-navbar-link
+      routerLink="buttons"
+      routerLinkActive="active"
+    >
+      <i uiIcon="fa-tablet-button"></i>
+      <span>Buttons</span>
+    </a>
+    <a
+      ui-mobile-navbar-link
+      routerLink="dropdowns"
+      routerLinkActive="active"
+    >
+      <i uiIcon="fa-tablet-button"></i>
+      <span>Dropdowns</span>
+    </a>
+    <a
+      ui-mobile-navbar-link
+      routerLink="icons"
+      routerLinkActive="active"
+    >
+      <i uiIcon="fa-tablet-button"></i>
+      <span>Icons</span>
+    </a>
+    <a
+      ui-mobile-navbar-link
+      routerLink="layouts"
+      routerLinkActive="active"
+    >
+      <i uiIcon="fa-tablet-button"></i>
+      <span>Layouts</span>
+    </a>
+  </ui-mobile-navbar>
+</ui-mobile-navbar-container>

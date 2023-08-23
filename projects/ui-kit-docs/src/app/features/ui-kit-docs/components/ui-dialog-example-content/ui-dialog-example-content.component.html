@@ -1,0 +1,24 @@
+<ui-panel>
+  <ui-panel-body>
+    <p>ui-dialog-example-content works!</p>
+    <a (click)="onOpenDialog()">CLick me</a>
+    <a (click)="onCloseDialog()">Close</a>
+    <ui-dropdown>
+      <div
+        uiDropdownToggle
+        class="p-2 border-black border cursor-pointer"
+      >
+        My Account
+      </div>
+      <ui-dropdown-menu placement="right">
+        <ui-dropdown-item *ngFor="let i of [1, 2, 3, 4]">
+          <i
+            uiIcon="fa-address-card fa-lg"
+            class="pr-2"
+          ></i>
+          <span> ui-dropdown-item works! </span>
+        </ui-dropdown-item>
+      </ui-dropdown-menu>
+    </ui-dropdown>
+  </ui-panel-body>
+</ui-panel>

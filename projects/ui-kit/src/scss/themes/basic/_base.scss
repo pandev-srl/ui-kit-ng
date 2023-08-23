@@ -1,0 +1,61 @@
+:root {
+  font-size: 14px;
+}
+
+body {
+  @apply bg-white;
+  @apply text-base;
+
+  @apply dark:bg-secondary-900;
+
+  @apply text-secondary-700;
+  @apply dark:text-secondary-300;
+}
+
+hr {
+  @apply my-3;
+  @apply dark:text-secondary-400;
+}
+
+p,
+a {
+  @apply font-normal;
+}
+
+p {
+  @apply text-base;
+  @apply tracking-wide;
+  @apply text-secondary-700;
+  @apply dark:text-secondary-300;
+}
+
+a {
+  @apply text-base;
+  @apply text-primary-600;
+  @apply dark:text-primary-400;
+  @apply cursor-pointer;
+  @apply hover:text-primary-500;
+}
+
+small {
+  @apply text-xs;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@import '@fortawesome/fontawesome-pro/scss/fontawesome';
+@import '@fortawesome/fontawesome-pro/scss/solid';
+@import '@fortawesome/fontawesome-pro/scss/brands';
+@import '@fortawesome/fontawesome-pro/scss/regular';
+@import '@fortawesome/fontawesome-pro/scss/light';
+@import '@fortawesome/fontawesome-pro/scss/duotone';
+@import '@fortawesome/fontawesome-pro/scss/duotone-icons';

@@ -1,0 +1,10 @@
+<ui-heading>Headings</ui-heading>
+
+<hr />
+
+<ui-heading
+  *ngFor="let size of uiHeadingSize"
+  [size]="size"
+>
+  Heading {{ size }}
+</ui-heading>

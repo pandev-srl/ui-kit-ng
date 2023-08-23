@@ -1,0 +1,12 @@
+<div class="flex flex-wrap divide-x-2 my-2">
+  <a
+    *ngFor="let item of navLinks"
+    [routerLink]="item.path"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: item.root || false }"
+    class="px-2"
+  >
+    <!--      <i uiIcon="fa-circle-info"></i>-->
+    <span>{{ item.name }}</span>
+  </a>
+</div>

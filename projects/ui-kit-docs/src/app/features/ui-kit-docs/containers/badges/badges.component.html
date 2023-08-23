@@ -1,0 +1,29 @@
+<ui-heading>Badges</ui-heading>
+
+<hr />
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+  <div
+    class="col"
+    *ngFor="let t of uiThemes"
+  >
+    <ui-heading size="h3">{{ t | titlecase }}</ui-heading>
+    <hr />
+    <div class="flex gap-2">
+      <ui-badge
+        title="The title of badge"
+        [theme]="t"
+      ></ui-badge>
+      <ui-badge
+        title="The title of badge"
+        [pulse]="true"
+        [theme]="t"
+      ></ui-badge>
+      <ui-badge
+        title="The title of badge"
+        [loading]="true"
+        [theme]="t"
+      ></ui-badge>
+    </div>
+  </div>
+</div>

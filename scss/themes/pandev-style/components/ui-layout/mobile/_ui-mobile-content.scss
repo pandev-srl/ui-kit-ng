@@ -1,6 +1,0 @@
-ui-mobile-content {
-  padding-top: calc(env(safe-area-inset-top) + $ui-mobile-header-height + 2 * $ui-mobile-header-margin);
-  padding-bottom: calc(env(safe-area-inset-bottom) + $ui-mobile-navbar-height + 2 * $ui-mobile-navbar-margin);
-
-  @apply px-3;
-}

@@ -1,0 +1,82 @@
+<ui-heading>Buttons</ui-heading>
+
+<hr />
+
+<div class="grid grid-cols-1 lg:grid-cols-3">
+  <div *ngFor="let style of uiButtonStyles">
+    <ui-heading size="h4">{{ style }}</ui-heading>
+
+    <div *ngFor="let size of uiButtonSize">
+      <ui-heading size="h5">{{ size }}</ui-heading>
+
+      <div class="flex flex-wrap gap-3">
+        <button
+          ui-button
+          [size]="size"
+          [buttonStyle]="style"
+          [theme]="theme"
+          *ngFor="let theme of uiThemes; let i = index"
+        >
+          btn {{ theme }} {{ i + 1 }}
+        </button>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3">
+  <div *ngFor="let style of uiButtonStyles">
+    <ui-heading size="h4">{{ style }} - Disabled</ui-heading>
+
+    <div *ngFor="let size of uiButtonSize">
+      <ui-heading size="h5">{{ size }}</ui-heading>
+
+      <div class="flex flex-wrap gap-3">
+        <button
+          ui-button
+          [disable]="true"
+          [size]="size"
+          [buttonStyle]="style"
+          [theme]="theme"
+          *ngFor="let theme of uiThemes; let i = index"
+        >
+          btn {{ theme }} {{ i + 1 }}
+        </button>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+</div>
+
+<!--<div *ngFor="let size of uiButtonSize">
+  <ui-heading size="h2">{{ size }}</ui-heading>
+  <div *ngFor="let style of uiButtonStyles">
+    <ui-heading size="h3">{{ style }}</ui-heading>
+    <div class="flex flex-wrap gap-3">
+      <button
+        ui-button
+        [size]="size"
+        [buttonStyle]="style"
+        [theme]="theme"
+        *ngFor="let theme of uiThemes; let i = index"
+      >
+        btn {{ i + 1 }}
+      </button>
+    </div>
+    <div class="pt-3 flex flex-wrap gap-3">
+      <button
+        ui-button
+        [disable]="true"
+        [size]="size"
+        [buttonStyle]="style"
+        [theme]="theme"
+        *ngFor="let theme of uiThemes; let i = index"
+      >
+        btn disabled {{ i + 1 }}
+      </button>
+    </div>
+  </div>
+</div>-->
