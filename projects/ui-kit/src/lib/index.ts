@@ -20,6 +20,7 @@ export * from './ui-icon';
 export * from './ui-layout';
 export * from './ui-loading';
 export * from './ui-panel';
+export * from './ui-table';
 
 // Services
 export * from './subscription-manager.service';

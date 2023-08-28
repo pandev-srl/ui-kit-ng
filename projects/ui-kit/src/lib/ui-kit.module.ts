@@ -14,6 +14,7 @@ import { UiDialogModule } from './ui-dialog';
 import { UiActionMessagesComponent } from './ui-action-messages';
 import { UiBadgeModule } from './ui-badge';
 import { UiCalendarModule } from './ui-calendar';
+import { UiTableModule } from './ui-table/ui-table.module';
 
 export const exportedModules = [
   UiActionMessagesComponent,
@@ -30,6 +31,7 @@ export const exportedModules = [
   UiLayoutModule,
   UiLoadingModule,
   UiPanelModule,
+  UiTableModule,
 ];
 
 @NgModule({

@@ -23,6 +23,7 @@ import { MobileLayoutComponent } from './layouts/mobile-layout/mobile-layout.com
 import { DesktopLayoutComponent } from './layouts/desktop-layout/desktop-layout.component';
 import { SimpleNavLinksComponent } from './components/simple-nav-links/simple-nav-links.component';
 import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-root-layout.component';
+import { TablesComponent } from './containers/tables/tables.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-r
     BadgesComponent,
     ActionMessagesComponent,
     CalendarComponent,
+    TablesComponent,
   ],
   imports: [CommonModule, UiKitModule, UiKitDocsRoutingModule, ReactiveFormsModule],
 })

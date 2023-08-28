@@ -1,0 +1,58 @@
+ui-table {
+  @apply min-w-full;
+
+  @apply divide-y divide-secondary-300;
+}
+
+ui-table-container {
+  @apply shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg mb-5;
+}
+
+ui-tbody {
+  @apply divide-y divide-secondary-200 bg-white;
+
+  ui-td {
+    @apply px-3 py-4 text-sm text-black;
+  }
+}
+
+ui-tcaption {
+}
+
+ui-tcol {
+}
+
+ui-tcolgroup {
+}
+
+ui-td {
+}
+
+ui-tfoot {
+}
+
+ui-thead {
+  @apply bg-secondary-50;
+
+  ui-td {
+    @apply px-3 py-3.5 text-left text-sm font-semibold text-secondary-900;
+  }
+}
+
+ui-tr {
+  ui-td {
+    @apply align-middle;
+
+    &.fit {
+      @apply w-[1%] whitespace-nowrap;
+    }
+  }
+
+  ui-td:first-child {
+    @apply ps-4 pe-3 sm:ps-6;
+  }
+
+  ui-td:last-child {
+    @apply ps-3 pe-4 sm:pe-6;
+  }
+}

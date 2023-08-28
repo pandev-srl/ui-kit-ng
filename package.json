@@ -6,9 +6,11 @@
     "lint": "ng lint",
     "prettify": "prettier --write .",
     "docs:build": "ng build --project ui-kit-docs",
+    "docs:ng": "ng --project ui-kit-docs",
     "docs:start": "ng serve --project ui-kit-docs",
     "docs:lint": "ng lint --project ui-kit-docs",
     "ui:build": "ng build --project ui-kit",
+    "ui:ng": "ng --project ui-kit",
     "ui:watch": "ng build --project ui-kit --watch",
     "ui:lint": "ng lint --project ui-kit"
   },

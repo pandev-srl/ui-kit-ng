@@ -67,4 +67,8 @@ export const navLinks: NavLink[] = [
     path: `panels`,
     name: 'Panels',
   },
+  {
+    path: `tables`,
+    name: 'Tables',
+  },
 ];

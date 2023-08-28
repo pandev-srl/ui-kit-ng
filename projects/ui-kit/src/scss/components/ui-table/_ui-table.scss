@@ -1,0 +1,39 @@
+ui-table {
+  @apply table border-collapse;
+}
+
+ui-table-container {
+  @apply overflow-hidden block;
+}
+
+ui-tbody {
+  @apply table-row-group;
+}
+
+ui-tcaption {
+  @apply table-caption;
+}
+
+ui-tcol {
+  @apply table-column;
+}
+
+ui-tcolgroup {
+  @apply table-column-group;
+}
+
+ui-td {
+  @apply table-cell;
+}
+
+ui-tfoot {
+  @apply table-footer-group;
+}
+
+ui-thead {
+  @apply table-header-group;
+}
+
+ui-tr {
+  @apply table-row;
+}
