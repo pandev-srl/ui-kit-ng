@@ -1,0 +1,55 @@
+ui-paginator {
+  @apply border-t border-secondary-200 bg-white py-3;
+
+  > .mobile-container {
+    @apply flex flex-1 justify-between lg:hidden;
+
+    > a.next-btn {
+      @apply ml-3 rounded-md border border-secondary-300 bg-white px-4 py-2 text-sm font-medium text-secondary-700 hover:bg-secondary-50;
+    }
+
+    > a.previous-btn {
+      @apply rounded-md border border-secondary-300 bg-white px-4 py-2 text-sm font-medium text-secondary-700 hover:bg-secondary-50;
+    }
+  }
+
+  > .desktop-container {
+    @apply sm:items-center sm:justify-end gap-x-4;
+
+    > .description-container {
+      p {
+        @apply text-sm text-secondary-700;
+
+        > span {
+          @apply font-medium;
+        }
+      }
+    }
+
+    > .nav-container {
+      nav {
+        @apply rounded-md shadow-sm -space-x-px;
+
+        > .previous-btn {
+          @apply rounded-l-md px-2 py-2 text-secondary-400 ring-1 ring-inset ring-secondary-300 hover:bg-secondary-50 focus:z-20 focus:outline-offset-0;
+        }
+
+        > .next-btn {
+          @apply rounded-r-md px-2 py-2 text-secondary-400 ring-1 ring-inset ring-secondary-300 hover:bg-secondary-50 focus:z-20 focus:outline-offset-0;
+        }
+
+        > .page-number {
+          @apply px-4 py-2 text-sm font-semibold text-secondary-900 ring-1 ring-inset ring-secondary-300 hover:bg-secondary-50 focus:z-20 focus:outline-offset-0;
+
+          &.active {
+            @apply bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+          }
+        }
+
+        > .dots-element {
+          @apply px-4 py-2 text-sm font-semibold text-secondary-700 ring-1 ring-inset ring-secondary-300 focus:outline-offset-0;
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@ import { DesktopLayoutComponent } from './layouts/desktop-layout/desktop-layout.
 import { SimpleNavLinksComponent } from './components/simple-nav-links/simple-nav-links.component';
 import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-root-layout.component';
 import { TablesComponent } from './containers/tables/tables.component';
+import { PaginatorComponent } from './containers/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TablesComponent } from './containers/tables/tables.component';
     ActionMessagesComponent,
     CalendarComponent,
     TablesComponent,
+    PaginatorComponent,
   ],
   imports: [CommonModule, UiKitModule, UiKitDocsRoutingModule, ReactiveFormsModule],
 })

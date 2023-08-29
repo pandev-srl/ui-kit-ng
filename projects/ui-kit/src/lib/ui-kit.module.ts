@@ -15,6 +15,7 @@ import { UiActionMessagesComponent } from './ui-action-messages';
 import { UiBadgeModule } from './ui-badge';
 import { UiCalendarModule } from './ui-calendar';
 import { UiTableModule } from './ui-table/ui-table.module';
+import { UiPaginatorModule } from './ui-paginator';
 
 export const exportedModules = [
   UiActionMessagesComponent,
@@ -30,6 +31,7 @@ export const exportedModules = [
   UiIconModule,
   UiLayoutModule,
   UiLoadingModule,
+  UiPaginatorModule,
   UiPanelModule,
   UiTableModule,
 ];

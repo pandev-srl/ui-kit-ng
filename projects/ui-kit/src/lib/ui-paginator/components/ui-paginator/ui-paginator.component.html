@@ -1,0 +1,106 @@
+<!-- <ng-container
+  *ngIf="currentPage && totalPages"
+  class="contents"
+>
+  <div>
+    <a
+      uiIcon="fa-angles-left fa-2x"
+      (click)="onChangePage(1)"
+    ></a>
+  </div>
+  <div>
+    <a
+      uiIcon="fa-angle-left fa-2x"
+      (click)="onChangePage(currentPage - 1)"
+    ></a>
+  </div>
+
+  <div *ngFor="let item of paginate(currentPage, totalPages).items">
+    <i
+      uiIcon="fa-ellipsis"
+      *ngIf="item.divider"
+    ></i>
+    <span *ngIf="item.page">{{ item.page }}</span>
+  </div>
+
+  <div>
+    <a
+      uiIcon="fa-angle-right fa-2x"
+      (click)="onChangePage(currentPage + 1)"
+    ></a>
+  </div>
+  <div>
+    <a
+      uiIcon="fa-angles-right fa-2x"
+      (click)="onChangePage(totalPages)"
+    ></a>
+  </div>
+</ng-container> -->
+
+<div
+  *ngIf="isMobile$ | async"
+  class="mobile-container"
+>
+  <a
+    class="previous-btn"
+    (click)="onPreviousPage(currentPage - 1)"
+  >
+    Previous
+  </a>
+  <a
+    class="next-btn"
+    (click)="onNextPage(currentPage + 1)"
+  >
+    Next
+  </a>
+</div>
+<div
+  *ngIf="isDesktop$ | async"
+  class="desktop-container"
+>
+  <div class="description-container">
+    <p>
+      {{ descriptionLabels.showing }}
+      <span>{{ itemsFrom }}</span>
+      {{ descriptionLabels.to }}
+      <span>{{ itemsTo }}</span>
+      {{ descriptionLabels.of }}
+      <span>{{ itemsCount }}</span>
+      {{ descriptionLabels.items }}
+    </p>
+  </div>
+  <div class="nav-container">
+    <nav>
+      <a
+        class="previous-btn"
+        (click)="onPreviousPage(currentPage - 1)"
+      >
+        <i uiIcon="fa-angle-left fa-lg"></i>
+      </a>
+
+      <ng-container *ngFor="let item of paginate(currentPage, numberOfPages).items">
+        <span
+          *ngIf="item.divider"
+          class="dots-element"
+        >
+          ...
+        </span>
+        <a
+          *ngIf="item.page"
+          class="page-number"
+          [ngClass]="{ active: item.page == currentPage }"
+          (click)="onChangePage(item.page)"
+        >
+          {{ item.page }}
+        </a>
+      </ng-container>
+
+      <a
+        class="next-btn"
+        (click)="onNextPage(currentPage + 1)"
+      >
+        <i uiIcon="fa-angle-right fa-lg"></i>
+      </a>
+    </nav>
+  </div>
+</div>

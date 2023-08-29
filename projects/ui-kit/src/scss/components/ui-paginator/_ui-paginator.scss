@@ -1,0 +1,52 @@
+ui-paginator {
+  @apply flex items-center justify-between;
+
+  > .mobile-container {
+    @apply flex flex-1 justify-between sm:hidden;
+
+    > a.next-btn {
+      @apply relative inline-flex items-center;
+    }
+
+    > a.previous-btn {
+      @apply relative inline-flex items-center;
+    }
+  }
+
+  > .desktop-container {
+    @apply hidden sm:flex sm:flex-1;
+
+    > .description-container {
+      p {
+        > span {
+        }
+      }
+    }
+
+    > .nav-container {
+      nav {
+        @apply isolate inline-flex;
+
+        > .previous-btn {
+          @apply relative inline-flex items-center;
+        }
+
+        > .next-btn {
+          @apply relative inline-flex items-center;
+        }
+
+        > .page-number {
+          @apply relative inline-flex items-center;
+
+          &.active {
+            @apply relative z-10 inline-flex items-center;
+          }
+        }
+
+        > .dots-element {
+          @apply relative inline-flex items-center;
+        }
+      }
+    }
+  }
+}

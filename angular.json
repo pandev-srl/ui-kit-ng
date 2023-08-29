@@ -51,7 +51,8 @@
             "inlineStyleLanguage": "scss",
             "assets": ["projects/ui-kit-docs/src/favicon.ico", "projects/ui-kit-docs/src/assets"],
             "styles": ["projects/ui-kit-docs/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "preserveSymlinks": true
           },
           "configurations": {
             "production": {

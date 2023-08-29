@@ -64,6 +64,10 @@ export const navLinks: NavLink[] = [
     name: 'Loading',
   },
   {
+    path: `paginator`,
+    name: 'Paginator',
+  },
+  {
     path: `panels`,
     name: 'Panels',
   },
