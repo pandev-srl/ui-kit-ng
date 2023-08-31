@@ -26,6 +26,14 @@ ui-td {
   @apply table-cell;
 }
 
+ui-td-sort {
+  @apply table-cell;
+
+  > .td-sort-container {
+    @apply cursor-pointer;
+  }
+}
+
 ui-td-sort-link {
   @apply block cursor-pointer;
 }

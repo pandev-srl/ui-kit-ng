@@ -18,6 +18,7 @@ import {
   UI_TD_SORT_LINK_DEFAULT_ICON_SET,
   UI_TD_SORT_LINK_DEFAULT_ICON_UP,
 } from './models';
+import { UiTdSortComponent } from './components/ui-td-sort/ui-td-sort.component';
 
 const exportedComponents = [
   UiTableComponent,
@@ -31,6 +32,7 @@ const exportedComponents = [
   UiTrComponent,
   UiTableContainerComponent,
   UiTdSortLinkComponent,
+  UiTdSortComponent,
 ];
 
 @NgModule({

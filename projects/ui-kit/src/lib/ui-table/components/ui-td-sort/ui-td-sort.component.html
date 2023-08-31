@@ -1,0 +1,12 @@
+<div
+  [ngClass]="containerClasses"
+  class="td-sort-container"
+  (click)="onOrderChange($event)"
+>
+  <div [ngClass]="contentClasses"><ng-content></ng-content></div>
+  <ui-td-sort-link
+    [order]="order"
+    (orderChange)="orderChange.emit($event)"
+    [ngClass]="sortLinkClasses"
+  ></ui-td-sort-link>
+</div>

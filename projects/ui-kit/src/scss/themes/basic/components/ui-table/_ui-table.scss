@@ -28,6 +28,9 @@ ui-tcolgroup {
 ui-td {
 }
 
+ui-td-sort {
+}
+
 ui-td-sort-link {
 }
 
@@ -37,7 +40,8 @@ ui-tfoot {
 ui-thead {
   @apply bg-secondary-50;
 
-  ui-td {
+  ui-td,
+  ui-td-sort {
     @apply px-3 py-3.5 text-left text-sm font-semibold text-secondary-900;
   }
 }
