@@ -6,10 +6,35 @@
   <ui-table>
     <ui-thead>
       <ui-tr>
-        <ui-td>Cell 1</ui-td>
-        <ui-td>Cell 2</ui-td>
-        <ui-td>Cell 3</ui-td>
-        <ui-td>Cell 4</ui-td>
+        <ui-td>
+          <div class="flex justify-start w-full">
+            <span>Cell 1</span>
+            <ui-td-sort-link iconClasses="fa-lg ps-2 text-secondary-400"></ui-td-sort-link>
+          </div>
+        </ui-td>
+        <ui-td>
+          <div class="flex justify-start w-full">
+            <span>Cell 2</span>
+            <ui-td-sort-link
+              iconClasses="fa-lg ps-2 text-secondary-400"
+              order="asc"
+            ></ui-td-sort-link>
+          </div>
+        </ui-td>
+        <ui-td>
+          <div class="flex justify-start w-full">
+            <span>Cell 3</span>
+            <ui-td-sort-link
+              iconClasses="fa-lg ps-2 text-secondary-400"
+              order="desc"
+            ></ui-td-sort-link>
+          </div>
+        </ui-td>
+        <ui-td>
+          <div class="flex justify-start w-full">
+            <span>Cell 4</span>
+          </div>
+        </ui-td>
       </ui-tr>
     </ui-thead>
     <ui-tbody>

@@ -26,6 +26,10 @@ ui-td {
   @apply table-cell;
 }
 
+ui-td-sort-link {
+  @apply block cursor-pointer;
+}
+
 ui-tfoot {
   @apply table-footer-group;
 }

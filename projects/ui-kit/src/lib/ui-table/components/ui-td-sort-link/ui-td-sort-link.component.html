@@ -1,0 +1,21 @@
+<i
+  *ngIf="order == 'asc'"
+  [iconSet]="currentIconSet"
+  [uiIcon]="currentIconUp"
+  [class]="iconClasses"
+  (click)="onOrderChange('desc')"
+></i>
+<i
+  *ngIf="order == 'desc'"
+  [iconSet]="currentIconSet"
+  [uiIcon]="currentIconDown"
+  [class]="iconClasses"
+  (click)="onOrderChange(null)"
+></i>
+<i
+  *ngIf="order == null"
+  [iconSet]="currentIconSet"
+  [uiIcon]="currentIconNone"
+  [class]="iconClasses"
+  (click)="onOrderChange('asc')"
+></i>

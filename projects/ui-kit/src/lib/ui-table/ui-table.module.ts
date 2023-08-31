@@ -10,6 +10,14 @@ import { UiTdComponent } from './components/ui-td/ui-td.component';
 import { UiTcolComponent } from './components/ui-tcol/ui-tcol.component';
 import { UiTrComponent } from './components/ui-tr/ui-tr.component';
 import { UiTableContainerComponent } from './components/ui-table-container/ui-table-container.component';
+import { UiTdSortLinkComponent } from './components/ui-td-sort-link/ui-td-sort-link.component';
+import { UiIconModule } from '../ui-icon';
+import {
+  UI_TD_SORT_LINK_DEFAULT_ICON_DOWN,
+  UI_TD_SORT_LINK_DEFAULT_ICON_NONE,
+  UI_TD_SORT_LINK_DEFAULT_ICON_SET,
+  UI_TD_SORT_LINK_DEFAULT_ICON_UP,
+} from './models';
 
 const exportedComponents = [
   UiTableComponent,
@@ -22,11 +30,30 @@ const exportedComponents = [
   UiTcolComponent,
   UiTrComponent,
   UiTableContainerComponent,
+  UiTdSortLinkComponent,
 ];
 
 @NgModule({
   declarations: [...exportedComponents],
-  imports: [CommonModule],
+  imports: [CommonModule, UiIconModule],
   exports: [...exportedComponents],
+  providers: [
+    {
+      provide: UI_TD_SORT_LINK_DEFAULT_ICON_SET,
+      useValue: null,
+    },
+    {
+      provide: UI_TD_SORT_LINK_DEFAULT_ICON_UP,
+      useValue: 'fa-sort-up',
+    },
+    {
+      provide: UI_TD_SORT_LINK_DEFAULT_ICON_DOWN,
+      useValue: 'fa-sort-down',
+    },
+    {
+      provide: UI_TD_SORT_LINK_DEFAULT_ICON_NONE,
+      useValue: 'fa-sort',
+    },
+  ],
 })
 export class UiTableModule {}
