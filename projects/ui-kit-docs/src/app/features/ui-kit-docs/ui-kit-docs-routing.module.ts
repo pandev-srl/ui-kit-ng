@@ -17,6 +17,7 @@ import { RootLayoutComponent } from './layouts/root-layout/root-layout.component
 import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-root-layout.component';
 import { TablesComponent } from './containers/tables/tables.component';
 import { PaginatorComponent } from './containers/paginator/paginator.component';
+import { StatsComponent } from './containers/stats/stats.component';
 
 const docsRoutes: Routes = [
   {
@@ -75,6 +76,10 @@ const docsRoutes: Routes = [
   {
     path: 'panels',
     component: PanelsComponent,
+  },
+  {
+    path: 'stats',
+    component: StatsComponent,
   },
   {
     path: 'paginator',

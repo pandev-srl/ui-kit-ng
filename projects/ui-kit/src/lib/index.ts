@@ -21,6 +21,7 @@ export * from './ui-layout';
 export * from './ui-loading';
 export * from './ui-paginator';
 export * from './ui-panel';
+export * from './ui-stat';
 export * from './ui-table';
 
 // Services

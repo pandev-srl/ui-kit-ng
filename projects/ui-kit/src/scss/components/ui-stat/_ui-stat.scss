@@ -1,0 +1,19 @@
+ui-stat {
+  @apply block;
+
+  > .stat-body {
+    > .stat-icon {
+    }
+
+    > .stat-data {
+      > .stat-label {
+      }
+
+      > .stat-value {
+      }
+    }
+  }
+
+  > .stat-footer {
+  }
+}

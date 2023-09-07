@@ -1,0 +1,21 @@
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div *ngFor="let s of stats">
+    <ui-stat
+      [label]="s.label"
+      [value]="s.value"
+    ></ui-stat>
+  </div>
+
+  <div *ngFor="let s of stats">
+    <ui-stat
+      [label]="s.label"
+      [value]="s.value"
+    >
+      <ng-template uiStatFooterContent>
+        <div class="px-4 py-2">
+          <a class="text-sm">Example link</a>
+        </div>
+      </ng-template>
+    </ui-stat>
+  </div>
+</div>

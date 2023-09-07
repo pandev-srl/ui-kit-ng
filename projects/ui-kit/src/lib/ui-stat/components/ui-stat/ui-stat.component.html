@@ -1,0 +1,27 @@
+<div class="stat-body">
+  <div
+    *ngIf="icon"
+    class="stat-icon"
+  >
+    <i
+      [uiIcon]="icon"
+      [iconSet]="currentIconSet"
+      [class]="iconClasses"
+    ></i>
+  </div>
+  <div class="stat-data">
+    <p
+      *ngIf="label"
+      class="stat-label"
+    >
+      {{ label }}
+    </p>
+    <p class="stat-value">{{ value }}</p>
+  </div>
+</div>
+<div
+  *ngIf="uiStatFooterContent"
+  class="stat-footer"
+>
+  <ng-container [ngTemplateOutlet]="uiStatFooterContent.templateRef"></ng-container>
+</div>

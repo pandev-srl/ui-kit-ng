@@ -72,6 +72,10 @@ export const navLinks: NavLink[] = [
     name: 'Panels',
   },
   {
+    path: `stats`,
+    name: 'Statistics',
+  },
+  {
     path: `tables`,
     name: 'Tables',
   },
