@@ -69,13 +69,13 @@ export class UiPaginatorComponent implements OnInit {
   }
 
   onPreviousPage(page: number): void {
-    if (page > 1) {
+    if (page >= 1) {
       this.onChangePage(page);
     }
   }
 
   onNextPage(page: number): void {
-    if (page < this.numberOfPages) {
+    if (page <= this.numberOfPages) {
       this.onChangePage(page);
     }
   }
