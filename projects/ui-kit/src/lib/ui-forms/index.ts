@@ -14,3 +14,5 @@ export * from './pipes/ui-to-select-option.pipe';
 
 export * from './directives/ui-abstract-control.directive';
 export * from './directives/ui-abstract-input.directive';
+
+export * from './services/ui-input-errors.service';
