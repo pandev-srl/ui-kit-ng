@@ -12,6 +12,7 @@ import {
 import { UiDialogOptions, UiDialogRef, UiDialogRefImpl } from '../models';
 import { UiDialogComponent } from '../components/ui-dialog/ui-dialog.component';
 import { UiDialogRefStoreService } from './ui-dialog-ref-store.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class UiDialogService {
@@ -24,16 +25,21 @@ export class UiDialogService {
     private renderFactory: RendererFactory2,
   ) {}
 
+  getById(id: string): UiDialogRef<any> | null {
+    return this.uiDialogRefStoreService.getById(id);
+  }
+
   open<T>(
     content: Type<T>,
     initialize: ((instance: T, contentRef: ComponentRef<T>) => void) | null,
     options: UiDialogOptions,
+    id?: string,
   ): UiDialogRef<T> {
     const renderer = this.renderFactory.createRenderer(null, null);
 
     const cfw = this.cfr.resolveComponentFactory(UiDialogComponent);
 
-    const uiDialogRef = new UiDialogRefImpl<T>(this);
+    const uiDialogRef = new UiDialogRefImpl<T>(this, id ?? uuidv4());
     uiDialogRef.options = {
       closeOnBackdropClick: true,
       ...options,
@@ -51,7 +57,7 @@ export class UiDialogService {
       }),
     );
 
-    this.uiDialogRefStoreService.dialogRefs.push(dialogComponentRef);
+    this.uiDialogRefStoreService.dialogRefs.push(uiDialogRef);
     uiDialogRef.dialogRef = dialogComponentRef;
 
     this.appRef.attachView(dialogComponentRef.hostView);
@@ -87,9 +93,8 @@ export class UiDialogService {
 
   close(dialogRef: UiDialogRef<any>): void {
     if (dialogRef.dialogRef) {
-      const index = this.uiDialogRefStoreService.dialogRefs.indexOf(dialogRef.dialogRef);
+      const index = this.uiDialogRefStoreService.dialogRefs.indexOf(dialogRef);
       dialogRef.dialogRef.destroy();
-      this.uiDialogRefStoreService.dialogRefs[index] = null;
       this.uiDialogRefStoreService.dialogRefs.splice(index, 1);
     }
   }

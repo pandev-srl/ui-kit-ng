@@ -1,10 +1,11 @@
 {
   "name": "@pandev-srl/ui-kit-ng",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0",
-    "luxon": "=3.2.0"
+    "luxon": "=3.2.0",
+    "uuid": "^9.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"

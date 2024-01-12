@@ -68,7 +68,7 @@ export class UiDialogComponent implements AfterViewInit {
     this.renderer.setStyle(
       this.elRef.nativeElement,
       'zIndex',
-      parseInt(actualZIndex) + this.dialogRefStoreService.dialogRefs.indexOf(this.dialogRef.dialogRef),
+      parseInt(actualZIndex) + this.dialogRefStoreService.dialogRefs.indexOf(this.dialogRef),
     );
   }
 }

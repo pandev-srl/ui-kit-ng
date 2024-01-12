@@ -9,6 +9,7 @@ export interface UiDialogOptions {
 }
 
 export abstract class UiDialogRef<T> {
+  abstract get id(): string;
   abstract options: UiDialogOptions | null;
   abstract dialogRef: ComponentRef<UiDialogComponent> | null;
   abstract contentRef: ComponentRef<T> | null;
@@ -18,12 +19,22 @@ export abstract class UiDialogRef<T> {
 }
 
 export class UiDialogRefImpl<T> {
+  private _id: string;
   private _options: UiDialogOptions | null = null;
   private _dialogRef: ComponentRef<UiDialogComponent> | null = null;
   private _contentRef: ComponentRef<T> | null = null;
   private _onHide = new Subject<void>();
 
-  constructor(private dialogService: UiDialogService) {}
+  constructor(
+    private dialogService: UiDialogService,
+    id: string,
+  ) {
+    this._id = id;
+  }
+
+  get id(): string {
+    return this._id;
+  }
 
   get onHide(): Observable<void> {
     return this._onHide;

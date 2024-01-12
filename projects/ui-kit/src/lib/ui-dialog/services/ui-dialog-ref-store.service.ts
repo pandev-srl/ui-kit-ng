@@ -1,11 +1,15 @@
-import { ComponentRef, Injectable } from '@angular/core';
-import { UiDialogComponent } from '../components/ui-dialog/ui-dialog.component';
+import { Injectable } from '@angular/core';
+import { UiDialogRef } from '../models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UiDialogRefStoreService {
-  readonly dialogRefs: (ComponentRef<UiDialogComponent> | null)[] = [];
+  readonly dialogRefs: UiDialogRef<any>[] = [];
 
   constructor() {}
+
+  getById(id: string): UiDialogRef<any> | null {
+    return this.dialogRefs.find((el) => el.id == id) || null;
+  }
 }
