@@ -62,6 +62,7 @@ export class UiDialogService {
 
     this.appRef.attachView(dialogComponentRef.hostView);
 
+    renderer.setStyle(this.document.body, 'overflow', 'hidden');
     renderer.appendChild(this.document.body, dialogComponentRef.location.nativeElement);
 
     dialogComponentRef.changeDetectorRef.detectChanges();
@@ -92,10 +93,16 @@ export class UiDialogService {
   }
 
   close(dialogRef: UiDialogRef<any>): void {
+    const renderer = this.renderFactory.createRenderer(null, null);
+
     if (dialogRef.dialogRef) {
       const index = this.uiDialogRefStoreService.dialogRefs.indexOf(dialogRef);
       dialogRef.dialogRef.destroy();
       this.uiDialogRefStoreService.dialogRefs.splice(index, 1);
+
+      if (this.uiDialogRefStoreService.dialogRefs.length == 0) {
+        renderer.removeStyle(this.document.body, 'overflow');
+      }
     }
   }
 }
