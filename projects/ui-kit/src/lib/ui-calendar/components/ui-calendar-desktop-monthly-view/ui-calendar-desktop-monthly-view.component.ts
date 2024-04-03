@@ -54,6 +54,7 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
   }
 
   ngOnChanges(_changes: SimpleChanges): void {
+    console.log(_changes);
     this.initDaysOfMonth();
     this.initWeekDays();
     this.initEvents();
@@ -64,15 +65,18 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
   onNext(): void {
     this.refDate = this.refDate.plus({ month: 1 });
     this.refDateChange.emit(this.refDate);
+    this.cdr.detectChanges();
   }
 
   onPrevious(): void {
     this.refDate = this.refDate.minus({ month: 1 });
+    this.cdr.markForCheck();
     this.refDateChange.emit(this.refDate);
   }
 
   onToday(): void {
     this.refDate = DateTime.now();
+    this.cdr.markForCheck();
     this.refDateChange.emit(this.refDate);
   }
 

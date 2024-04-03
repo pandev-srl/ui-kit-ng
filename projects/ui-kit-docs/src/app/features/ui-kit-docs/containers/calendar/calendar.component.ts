@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { DateTime } from 'luxon';
 
 @Component({
   selector: 'ui-docs-calendar',
@@ -6,4 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./calendar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CalendarComponent {}
+export class CalendarComponent {
+  refDate: DateTime = DateTime.now();
+}
