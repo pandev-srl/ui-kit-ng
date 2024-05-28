@@ -8,7 +8,7 @@ import { UiPagination } from '@pandev-srl/ui-kit-ng';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PaginatorComponent {
-  paginatorData: UiPagination = { numberOfPages: 50, currentPage: 25, itemsCount: 500, itemsPerPage: 10 };
+  paginatorData: UiPagination = { numberOfPages: 50, currentPage: 25, itemsCount: 450, itemsPerPage: 10 };
 
   onChangePage(page: number): void {
     this.paginatorData = {

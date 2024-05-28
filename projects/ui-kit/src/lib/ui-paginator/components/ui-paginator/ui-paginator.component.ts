@@ -52,7 +52,12 @@ export class UiPaginatorComponent implements OnInit {
   }
 
   get itemsTo(): number {
-    return this.currentPage * this.itemsPerPage;
+    const to = this.currentPage * this.itemsPerPage;
+    if (to < this.itemsCount) {
+      return to;
+    } else {
+      return this.itemsCount;
+    }
   }
 
   private breakpointObserver: BreakpointObserver = inject(BreakpointObserver);
