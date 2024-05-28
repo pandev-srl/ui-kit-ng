@@ -20,7 +20,6 @@ export class UiCalendarComponent {
 
   constructor() {
     this.refDateChange.pipe(takeUntilDestroyed()).subscribe((val) => {
-      console.log(val);
       this.refDate = val;
     });
   }
