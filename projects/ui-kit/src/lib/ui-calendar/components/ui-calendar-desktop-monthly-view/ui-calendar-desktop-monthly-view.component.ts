@@ -111,24 +111,29 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
       let firstAvailablePlace: number | null = null;
       for (let i = 0; i < numberOfDays; i++) {
         const currentDate = startDate.plus({ day: i });
+        const currentSQLDate = currentDate.toSQLDate();
 
-        if (!this.eventsByDate[currentDate.toSQLDate()]) {
-          this.eventsByDate[currentDate.toSQLDate()] = [];
+        if (!currentSQLDate) {
+          throw 'Failed to get current date';
+        }
+
+        if (!this.eventsByDate[currentSQLDate]) {
+          this.eventsByDate[currentSQLDate] = [];
         }
 
         if (firstAvailablePlace == null) {
-          for (let j = 0; j < this.eventsByDate[currentDate.toSQLDate()].length && firstAvailablePlace == null; j++) {
-            if (this.eventsByDate[currentDate.toSQLDate()][j] === undefined) {
+          for (let j = 0; j < this.eventsByDate[currentSQLDate].length && firstAvailablePlace == null; j++) {
+            if (this.eventsByDate[currentSQLDate][j] === undefined) {
               firstAvailablePlace = j;
             }
           }
 
           if (firstAvailablePlace === null) {
-            firstAvailablePlace = this.eventsByDate[currentDate.toSQLDate()].length;
+            firstAvailablePlace = this.eventsByDate[currentSQLDate].length;
           }
         }
 
-        this.eventsByDate[currentDate.toSQLDate()][firstAvailablePlace] = {
+        this.eventsByDate[currentSQLDate][firstAvailablePlace] = {
           event,
           numberOfDays,
         };
@@ -142,7 +147,13 @@ export class UiCalendarDesktopMonthlyViewComponent implements OnInit, OnChanges 
 
       for (let j = 0; j < this.daysOfMonthMatrix[i].length; j++) {
         const dayOfMonth = this.daysOfMonthMatrix[i][j];
-        const eventsOfDayOfMonth = this.eventsByDate[dayOfMonth.dateTime.toSQLDate()];
+        const dayOfMonthToSqlDate = dayOfMonth.dateTime.toSQLDate();
+
+        if (!dayOfMonthToSqlDate) {
+          throw 'Failed to get dayOfMonthToSqlDate';
+        }
+
+        const eventsOfDayOfMonth = this.eventsByDate[dayOfMonthToSqlDate];
 
         if (!this.eventsByDateToPrint[i][j]) {
           this.eventsByDateToPrint[i][j] = [];

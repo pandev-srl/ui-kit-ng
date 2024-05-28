@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": ">=16 < 18",
     "@angular/core": ">=16 < 18",
-    "luxon": "^3.2.0",
+    "luxon": "^3.4.0",
     "uuid": "^9.0.1"
   },
   "dependencies": {
