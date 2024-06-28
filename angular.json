@@ -12,7 +12,8 @@
         "@schematics/angular:component": {
           "style": "scss",
           "skipTests": true,
-          "changeDetection": "OnPush"
+          "changeDetection": "OnPush",
+          "standalone": false
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -113,7 +114,8 @@
         "@schematics/angular:component": {
           "style": "none",
           "skipTests": true,
-          "changeDetection": "OnPush"
+          "changeDetection": "OnPush",
+          "standalone": false
         },
         "@schematics/angular:class": {
           "skipTests": true

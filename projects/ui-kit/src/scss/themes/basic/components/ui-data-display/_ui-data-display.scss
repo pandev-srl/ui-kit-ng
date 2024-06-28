@@ -1,0 +1,35 @@
+ui-data-display {
+  @apply divide-y divide-secondary-200 border-y border-y-secondary-200 mt-6;
+
+  ui-data-display-item {
+    @apply block;
+
+    @apply sm:grid sm:grid-cols-3 sm:gap-4;
+  }
+
+  ui-data-display-item-label {
+    @apply block;
+
+    @apply text-sm font-medium leading-6 text-secondary-900;
+
+    @apply px-4 lg:py-6 pb-0 pt-6;
+  }
+
+  ui-data-display-item-content {
+    @apply block;
+
+    @apply text-sm leading-6 text-secondary-700 sm:col-span-2;
+
+    @apply px-4 lg:py-6 pb-6 pt-0 mt-1 lg:mt-0;
+  }
+
+  &.condensed {
+    ui-data-display-item-label {
+      @apply px-2 lg:py-3 pb-0 pt-3;
+    }
+
+    ui-data-display-item-content {
+      @apply px-2 lg:py-3 pb-3 pt-0 mt-1 lg:mt-0;
+    }
+  }
+}

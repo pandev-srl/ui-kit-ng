@@ -12,6 +12,7 @@ export * from './ui-badge';
 export * from './ui-button';
 export * from './ui-calendar';
 export * from './ui-click-outside';
+export * from './ui-data-display';
 export * from './ui-dialog';
 export * from './ui-dropdown';
 export * from './ui-forms';

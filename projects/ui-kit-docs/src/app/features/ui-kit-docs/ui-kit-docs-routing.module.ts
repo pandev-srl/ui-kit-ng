@@ -18,6 +18,7 @@ import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-r
 import { TablesComponent } from './containers/tables/tables.component';
 import { PaginatorComponent } from './containers/paginator/paginator.component';
 import { StatsComponent } from './containers/stats/stats.component';
+import { DataDisplayComponent } from './containers/data-display/data-display.component';
 
 const docsRoutes: Routes = [
   {
@@ -44,6 +45,10 @@ const docsRoutes: Routes = [
   {
     path: 'calendar',
     component: CalendarComponent,
+  },
+  {
+    path: 'data-display',
+    component: DataDisplayComponent,
   },
   {
     path: 'dialogs',

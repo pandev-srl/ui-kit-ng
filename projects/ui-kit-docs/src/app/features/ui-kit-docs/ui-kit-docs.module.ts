@@ -26,6 +26,8 @@ import { DrawerRootLayoutComponent } from './layouts/drawer-root-layout/drawer-r
 import { TablesComponent } from './containers/tables/tables.component';
 import { PaginatorComponent } from './containers/paginator/paginator.component';
 import { StatsComponent } from './containers/stats/stats.component';
+import { DataDisplayComponent } from './containers/data-display/data-display.component';
+import { UiDataDisplayModule } from '../../../../../ui-kit/src/lib';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { StatsComponent } from './containers/stats/stats.component';
     TablesComponent,
     PaginatorComponent,
     StatsComponent,
+    DataDisplayComponent,
   ],
   imports: [CommonModule, UiKitModule, UiKitDocsRoutingModule, ReactiveFormsModule],
 })

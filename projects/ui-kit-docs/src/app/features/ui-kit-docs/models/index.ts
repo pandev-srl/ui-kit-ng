@@ -36,6 +36,10 @@ export const navLinks: NavLink[] = [
     name: 'Calendar',
   },
   {
+    path: `data-display`,
+    name: 'Data display',
+  },
+  {
     path: `dialogs`,
     name: 'Dialogs',
   },
