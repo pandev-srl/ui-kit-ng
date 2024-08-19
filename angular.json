@@ -163,6 +163,28 @@
           "options": {
             "lintFilePatterns": ["projects/ui-kit/**/*.ts", "projects/ui-kit/**/*.html"]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/ui-kit/.storybook",
+            "browserTarget": "ui-kit:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/ui-kit"],
+            "styles": ["projects/ui-kit-docs/src/styles.scss"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/ui-kit/.storybook",
+            "browserTarget": "ui-kit:build",
+            "styles": ["projects/ui-kit-docs/src/styles.scss"],
+            "compodoc": false,
+            "compodocArgs": ["-e", "json", "-d", "projects/ui-kit"],
+            "outputDir": "dist/storybook/ui-kit"
+          }
         }
       }
     }

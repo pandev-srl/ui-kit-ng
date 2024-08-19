@@ -32,3 +32,15 @@ yarn ui:watch
 ```bash
 yarn docs:start
 ```
+
+## Start storybook app for development
+
+```bash
+yarn storybook:start
+```
+
+## Build storybook app for development
+
+```bash
+yarn storybook:build
+```

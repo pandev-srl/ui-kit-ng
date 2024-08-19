@@ -3,6 +3,9 @@ import { UiAlertModule } from '../ui-alert';
 import { UiTheme } from '../models';
 import { CommonModule } from '@angular/common';
 
+/**
+ * EXample doc
+ */
 @Component({
   selector: 'ui-action-messages',
   templateUrl: './ui-action-messages.component.html',

@@ -1,0 +1,372 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "UiActionMessagesComponent",
+            "id": "component-UiActionMessagesComponent-f8b8052a76811d68b0cadffcb236db0a8b2e580517ba2dfd30f7811119d23a1aa48074ca1334803bac578ac6b8f99c705be70ea95fcf83a0d84a0663cab1b510",
+            "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-action-messages",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./ui-action-messages.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "messages",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'danger'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "UiTheme",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "UiAlertModule",
+                    "type": "module"
+                }
+            ],
+            "description": "<p>EXample doc</p>\n",
+            "rawdescription": "\n\nEXample doc\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\nimport { UiAlertModule } from '../ui-alert';\nimport { UiTheme } from '../models';\nimport { CommonModule } from '@angular/common';\n\n/**\n * EXample doc\n */\n@Component({\n  selector: 'ui-action-messages',\n  templateUrl: './ui-action-messages.component.html',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  imports: [CommonModule, UiAlertModule],\n  standalone: true,\n})\nexport class UiActionMessagesComponent {\n  @Input() theme: UiTheme = 'danger';\n  @Input() messages: string[] = [];\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<ui-alert [theme]=\"theme\">\n  <ul\n    *ngFor=\"let message of messages\"\n    class=\"text-sm w-full\"\n  >\n    <li>{{ message }}</li>\n  </ul>\n</ui-alert>\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'primary',\n    messages: ['Message 1', 'Message 2'],\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UiActionMessagesComponent>",
+                "defaultValue": "{\n  title: 'Action messages',\n  component: UiActionMessagesComponent,\n  tags: ['autodocs'],\n  args: {\n    theme: 'accent',\n    messages: [],\n  },\n  argTypes: {\n    theme: {\n      description: 'The color theme you want to apply',\n      options: uiThemes,\n      control: { type: 'select' },\n      table: {\n        defaultValue: {\n          summary: 'primary',\n        },\n      },\n    },\n    messages: {\n      description: 'A list of messages to display',\n      table: {\n        defaultValue: {\n          summary: '[]',\n        },\n      },\n    },\n  },\n  parameters: {\n    docs: {\n      description: {\n        component: `UiActionMessagesComponent. Used to display feedbacks form actions. It's based on UiAlertComponent.`,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UiAlertComponent>",
+                "defaultValue": "{\n  title: 'Alert',\n  component: UiAlertComponent,\n  decorators: [moduleMetadata({ imports: [UiIconModule] })],\n  tags: ['autodocs'],\n  args: {\n    theme: 'primary',\n  },\n  argTypes: {\n    theme: {\n      description: 'The color theme you want to apply',\n      options: uiThemes,\n      control: { type: 'select' },\n      table: {\n        defaultValue: {\n          summary: 'primary',\n        },\n      },\n    },\n    title: {\n      type: 'string',\n      description: 'You can add a title to your alert',\n    },\n    description: {\n      type: 'string',\n      description: 'The main text of your alert',\n    },\n    icon: {\n      type: 'string',\n      description: 'An icon name used by ui-icon component',\n    },\n  },\n  parameters: {\n    docs: {\n      description: { component: `Used to display alerts` },\n    },\n  },\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  tags: ['autodocs'],\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "WithIconAndTitle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'With icon and title',\n  args: {\n    title: 'Alert with a title',\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n    icon: 'fa-triangle-exclamation',\n  },\n}"
+            },
+            {
+                "name": "WithTitle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'With a title',\n  args: {\n    title: 'Alert with a title',\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UiActionMessagesComponent>",
+                "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UiAlertComponent>",
+                "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'primary',\n    messages: ['Message 1', 'Message 2'],\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UiActionMessagesComponent>",
+                    "defaultValue": "{\n  title: 'Action messages',\n  component: UiActionMessagesComponent,\n  tags: ['autodocs'],\n  args: {\n    theme: 'accent',\n    messages: [],\n  },\n  argTypes: {\n    theme: {\n      description: 'The color theme you want to apply',\n      options: uiThemes,\n      control: { type: 'select' },\n      table: {\n        defaultValue: {\n          summary: 'primary',\n        },\n      },\n    },\n    messages: {\n      description: 'A list of messages to display',\n      table: {\n        defaultValue: {\n          summary: '[]',\n        },\n      },\n    },\n  },\n  parameters: {\n    docs: {\n      description: {\n        component: `UiActionMessagesComponent. Used to display feedbacks form actions. It's based on UiAlertComponent.`,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UiAlertComponent>",
+                    "defaultValue": "{\n  title: 'Alert',\n  component: UiAlertComponent,\n  decorators: [moduleMetadata({ imports: [UiIconModule] })],\n  tags: ['autodocs'],\n  args: {\n    theme: 'primary',\n  },\n  argTypes: {\n    theme: {\n      description: 'The color theme you want to apply',\n      options: uiThemes,\n      control: { type: 'select' },\n      table: {\n        defaultValue: {\n          summary: 'primary',\n        },\n      },\n    },\n    title: {\n      type: 'string',\n      description: 'You can add a title to your alert',\n    },\n    description: {\n      type: 'string',\n      description: 'The main text of your alert',\n    },\n    icon: {\n      type: 'string',\n      description: 'An icon name used by ui-icon component',\n    },\n  },\n  parameters: {\n    docs: {\n      description: { component: `Used to display alerts` },\n    },\n  },\n}"
+                },
+                {
+                    "name": "WithIconAndTitle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'With icon and title',\n  args: {\n    title: 'Alert with a title',\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n    icon: 'fa-triangle-exclamation',\n  },\n}"
+                },
+                {
+                    "name": "WithTitle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'With a title',\n  args: {\n    title: 'Alert with a title',\n    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis posuere risus.',\n  },\n}"
+                }
+            ],
+            "projects/ui-kit/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-kit/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  tags: ['autodocs'],\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UiActionMessagesComponent>",
+                    "file": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UiAlertComponent>",
+                    "file": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 4,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/ui-kit/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UiActionMessagesComponent",
+                "coveragePercent": 33,
+                "coverageCount": "1/3",
+                "status": "medium"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-action-messages/ui-action-messages.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithIconAndTitle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-kit/src/lib/ui-alert/ui-alert/ui-alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithTitle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
