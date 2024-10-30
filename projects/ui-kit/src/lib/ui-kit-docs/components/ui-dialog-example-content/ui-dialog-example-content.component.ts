@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewContainerRef } from '@angular/core';
-import { UiDialogRef, UiDialogService } from '@pandev-srl/ui-kit-ng';
-import { UiDialogAlertComponent } from '@pandev-srl/ui-kit-ng';
+import { UiDialogRef, UiDialogService, UiDialogAlertComponent } from '../../../ui-dialog';
 
 @Component({
   selector: 'ui-docs-ui-dialog-example-content',

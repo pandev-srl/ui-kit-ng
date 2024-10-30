@@ -17,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: 'docs',
-        loadChildren: () => import('./features/ui-kit-docs/ui-kit-docs.module').then((m) => m.UiKitDocsModule),
+        loadChildren: () => import('@pandev-srl/ui-kit-ng').then((m) => m.UiKitDocsModule),
       },
     ],
   },

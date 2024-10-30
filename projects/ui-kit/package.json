@@ -1,9 +1,9 @@
 {
   "name": "@pandev-srl/ui-kit-ng",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "peerDependencies": {
-    "@angular/common": ">=16 < 18",
-    "@angular/core": ">=16 < 18",
+    "@angular/common": ">=16 < 19",
+    "@angular/core": ">=16 < 19",
     "luxon": "^3.4.0",
     "uuid": "^9.0.1"
   },

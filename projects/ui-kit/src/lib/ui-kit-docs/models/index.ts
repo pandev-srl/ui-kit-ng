@@ -1,4 +1,6 @@
-import { UiButtonSize, UiButtonStyle, UiHeadingSize, UiTheme } from '@pandev-srl/ui-kit-ng';
+import { UiHeadingSize } from '../../ui-heading';
+import { UiButtonSize, UiButtonStyle } from '../../ui-button';
+import { UiTheme } from '../../models';
 
 export const uiThemes: UiTheme[] = ['primary', 'secondary', 'accent', 'success', 'danger', 'warning', 'info'];
 

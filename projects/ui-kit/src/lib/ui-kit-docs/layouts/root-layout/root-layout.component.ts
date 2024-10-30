@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { map, Observable } from 'rxjs';
-import { UiBreakpoints } from '@pandev-srl/ui-kit-ng';
+import { UiBreakpoints } from '../../../ui-layout';
 
 @Component({
   selector: 'ui-docs-root-layout',

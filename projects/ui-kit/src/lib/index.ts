@@ -28,3 +28,6 @@ export * from './ui-table';
 
 // Services
 export * from './subscription-manager.service';
+
+// Docs export
+export * from './ui-kit-docs';

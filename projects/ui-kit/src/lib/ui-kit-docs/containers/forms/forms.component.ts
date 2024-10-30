@@ -8,7 +8,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import { UiFormOption } from '@pandev-srl/ui-kit-ng';
+import { UiFormOption } from '../../../ui-forms';
 import { delay, Observable, of } from 'rxjs';
 
 @Component({

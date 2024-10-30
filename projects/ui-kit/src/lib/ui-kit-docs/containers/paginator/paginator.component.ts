@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { UiPagination } from '@pandev-srl/ui-kit-ng';
+import { UiPagination } from '../../../ui-paginator';
 
 @Component({
   selector: 'ui-docs-paginator',

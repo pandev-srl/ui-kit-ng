@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UiKitDocsRoutingModule } from './ui-kit-docs-routing.module';
 import { IconsComponent } from './containers/icons/icons.component';
 import { LayoutsComponent } from './containers/layouts/layouts.component';
-import { UiKitModule } from '@pandev-srl/ui-kit-ng';
+import { UiKitModule } from '../ui-kit.module';
 import { DropdownsComponent } from './containers/dropdowns/dropdowns.component';
 import { ButtonsComponent } from './containers/buttons/buttons.component';
 import { HeadingsComponent } from './containers/headings/headings.component';
@@ -27,7 +27,6 @@ import { TablesComponent } from './containers/tables/tables.component';
 import { PaginatorComponent } from './containers/paginator/paginator.component';
 import { StatsComponent } from './containers/stats/stats.component';
 import { DataDisplayComponent } from './containers/data-display/data-display.component';
-import { UiDataDisplayModule } from '../../../../../ui-kit/src/lib';
 
 @NgModule({
   declarations: [

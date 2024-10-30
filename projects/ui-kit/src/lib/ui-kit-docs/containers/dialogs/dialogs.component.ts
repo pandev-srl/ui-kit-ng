@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
-import { UiDialogAlertComponent, UiDialogConfirmComponent, UiDialogService, UiTheme } from '@pandev-srl/ui-kit-ng';
+import { UiDialogAlertComponent, UiDialogConfirmComponent, UiDialogService } from '../../../ui-dialog';
+import { UiTheme } from '../../../models';
 import { first } from 'rxjs';
 import { uiThemes } from '../../models';
 
