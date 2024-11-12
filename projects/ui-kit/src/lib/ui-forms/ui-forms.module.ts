@@ -22,6 +22,10 @@ import { UiLoadingModule } from '../ui-loading';
 import { UiToSelectOptionPipe } from './pipes/ui-to-select-option.pipe';
 import { UiClickOutsideModule } from '../ui-click-outside';
 import { UiSingleFileDropzoneComponent } from './components/ui-single-file-dropzone/ui-single-file-dropzone.component';
+import {
+  UiInputWrapperFloatedComponent
+} from './components/ui-input-wrapper-floated/ui-input-wrapper-floated.component';
+import { UiInputTextFloatedComponent } from './components/ui-input-text-floated/ui-input-text-floated.component';
 
 const exportedComponents = [
   UiCheckboxComponent,
@@ -29,8 +33,10 @@ const exportedComponents = [
   UiFieldDisplayComponent,
   UiInputNumberComponent,
   UiInputTextComponent,
+  UiInputTextFloatedComponent,
   UiInputTextareaComponent,
   UiInputWrapperComponent,
+  UiInputWrapperFloatedComponent,
   UiSelectComponent,
   UiToSelectOptionPipe,
   UiSingleFileDropzoneComponent,

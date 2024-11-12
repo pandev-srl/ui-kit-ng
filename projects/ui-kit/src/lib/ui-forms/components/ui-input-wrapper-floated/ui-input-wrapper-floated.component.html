@@ -1,0 +1,48 @@
+<ui-control-wrapper
+  [id]="id"
+  [label]="label"
+  [hint]="hint"
+  [errors]="errors"
+  [errorsMap]="errorsMap"
+  [isDirtyOrTouched]="isDirtyOrTouched"
+  [hasErrors]="hasErrors"
+  [isPending]="isPending"
+  [disableValidationColors]="disableValidationColors"
+  [useVerticalLabel]="false"
+>
+  <div class="input-wrapper-floated">
+    <div class="input-item-floated relative rounded-md px-3 pb-0 pt-4 shadow-sm ring-1 ring-inset ring-gray-400">
+      <input
+        name="email"
+        type="text"
+        class="peer h-9 w-full text-gray-900 placeholder-transparent focus:outline-none"
+        placeholder="john@doe.com"
+      />
+      <label
+        class="absolute left-3 top-1 text-gray-400 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-gray-400 peer-focus:text-sm"
+        >Email address</label
+      >
+      <!-- <ng-content></ng-content> -->
+    </div>
+    <div
+      *ngIf="isDirtyOrTouched"
+      class="validation-item"
+    >
+      <i
+        [uiIcon]="defaultErrorIcon"
+        *ngIf="hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultSuccessIcon"
+        *ngIf="!hasErrors && !isPending && !disableValidationColors"
+      ></i>
+
+      <i
+        [uiIcon]="defaultPendingIcon"
+        class="fa-spin"
+        *ngIf="isPending && !disableValidationColors"
+      ></i>
+    </div>
+  </div>
+</ui-control-wrapper>

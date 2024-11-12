@@ -2,6 +2,7 @@ ui-checkbox,
 ui-field-display,
 ui-input-number,
 ui-input-text,
+ui-input-text-floated,
 ui-input-textarea,
 ui-select {
   @apply block;
@@ -10,6 +11,7 @@ ui-select {
     @apply focus-visible:outline-0 focus-visible:outline-none;
   }
 
+  // LABELS
   > ui-input-wrapper > ui-control-wrapper > .label-wrapper,
   > ui-control-wrapper > .label-wrapper,
   > ui-control-wrapper > .boolean-wrapper > .label-wrapper {
